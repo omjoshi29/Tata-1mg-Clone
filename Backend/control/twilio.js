@@ -1,5 +1,6 @@
 const User=require("../Mongo/usermongo")
 var jwt = require('jsonwebtoken');
+const Auth = require("../Routes/User");
 
 require("dotenv").config()
 let secreat=process.env.SECREAT_KEY
@@ -30,6 +31,8 @@ async function verfieddata(username){
     console.log(data)
     return data
 }
+
+
 
 
 
