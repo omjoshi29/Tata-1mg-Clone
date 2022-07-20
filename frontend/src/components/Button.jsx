@@ -10,6 +10,7 @@ const Wrapper = styled.button`
   font-size: ${(props) => (props.fontSize ? props.fontSize : "15px")};
   border-radius: ${(props) => (props.br ? props.br : "0")};
   height: ${(props) => (props.height ? props.height : "45px")};
+  cursor: pointer;
 `;
 
 const Button = ({ styles }) => {
