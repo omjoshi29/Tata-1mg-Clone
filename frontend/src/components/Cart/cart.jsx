@@ -1,8 +1,18 @@
 import React, { useState } from "react";
+import Button from "../Button";
 import styles from "./cart.module.css";
 
 export const Cart = () => {
   const [count, setCount] = useState(1);
+  const button = {
+    bg: "#ff6f61",
+    text: "CHECKOUT",
+    width: "98%",
+    br: "0px",
+    color: "#ffffff",
+    height: "50px",
+    fontSize: "18px",
+  };
   let price = 200 * count;
   return (
     <div className={styles.Main}>
@@ -141,7 +151,9 @@ export const Cart = () => {
             <p>Your delivery location</p>
             <p>Ratlam</p>
           </div>
-          <div></div>
+          <div className={styles.location1}>
+              <Button styles={button}/>
+          </div>
         </div>
       </div>
     </div>

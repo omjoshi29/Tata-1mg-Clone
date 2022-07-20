@@ -242,11 +242,19 @@
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .location{
-    background-color: #e4f6e7;
+    background-color: #ffff;
     padding: 15px 15px;
     font-weight: 300;
     display: flex;
     justify-content: space-between;
     font-size: 13px;
+}
+.location>p:nth-child(2){
+    color:#ff7461 ;
+    font-size: 15px;
+    font-weight: 600;
+}
+.location1{
+   padding-left: 12px;
 }
 
