@@ -270,7 +270,7 @@ export const NavWrapper = styled.nav`
           padding: 0;
           gap: 15px;
           li {
-            border: 1px solid red;
+            /* border: 1px solid red; */
           }
         }
       }
