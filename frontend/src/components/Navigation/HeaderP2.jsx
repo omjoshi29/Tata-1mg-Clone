@@ -25,7 +25,12 @@ const HeaderP2 = () => {
             <span>
               <ImLocation />
             </span>
-            <input type="text" className="location" value={location} />
+            <input
+              type="text"
+              className="location"
+              value={location}
+              onChange={(e) => setLocation(e.target.value)}
+            />
             <span style={{ cursor: "pointer" }}>
               <IoMdLocate />
             </span>
