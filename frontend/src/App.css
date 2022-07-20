@@ -6,6 +6,13 @@
 body {
   padding: 0;
   margin: 0;
+  background-color: var(--background);
+  /* max-width: 100%; */
   font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #f8f8f8;
+}
+
+:root {
+  --border: #f1f4f6;
+  --background: #ffffff;
 }
