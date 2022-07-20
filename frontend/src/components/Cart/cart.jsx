@@ -75,6 +75,17 @@ export const Cart = ()=>{
                    </div>
                 
                 </div>
+                <div className={styles.coins}>
+                    <div className={styles.coinsdata}>
+                       <div>
+                           <img src="https://res.cloudinary.com/du8msdgbj/image/upload/v1645088829/210921_TataNeu_appicon_light_24px_circle_3_1x_vxwibw.png"/>
+                           <p>My NeuCoins</p>
+                        </div>
+                       <div>
+                           <p>Balance: 0 NeuCoin</p>
+                       </div>
+                    </div>
+                </div>
             </div>  
         </div>
     )

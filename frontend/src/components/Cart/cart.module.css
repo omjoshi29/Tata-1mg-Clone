@@ -153,4 +153,17 @@
     padding-top: 8px;
     padding-bottom: -10px;
     color: #59c067;
- }
+}
+.coins {
+    display: flex;
+    margin-top:30px ;
+}
+.coinsdata {
+    display: flex;
+    justify-content: space-between;
+}
+.coinsdata>div {
+    display: flex;
+    
+}
+
