@@ -85,6 +85,49 @@ export const Cart = ()=>{
                            <p>Balance: 0 NeuCoin</p>
                        </div>
                     </div>
+                    <hr/>
+                    <div className={styles.neucoins}>
+                        <p>35 NeuCoins to be earned on this order*</p>
+                        <p>cp Extra 87 NeuCoins for care Plan members</p>
+                        <p>Add care plan to cart</p>
+                    </div>
+                </div>
+                <div className={styles.prdata}>
+                    <div className={styles.discount}>
+                        <p>Item Total(MRP)</p>
+                        <p>₹2445</p>
+                    </div>
+                    <div className={styles.discount}>
+                        <p>Price Discount</p>
+                        <p>-₹700</p>
+                    </div>
+                    <hr/>
+                    <div className={styles.discount}>
+                        <p>Shipping Fee</p>
+                        <p>₹0</p>
+                    </div>
+                    <div className={styles.discount}>
+                        <p>Packaging and Handling Chargesⓘ</p>
+                        <p>₹5</p>
+                    </div>
+                    <hr/>
+                    <div className={styles.paid}>
+                        <p>To be paid</p>
+                        <p>₹1750</p>
+                    </div>
+                    <div className={styles.paid1}>
+                        <p>To be paid</p>
+                        <p>₹700</p>
+                    </div>
+                </div>
+                <div className={styles.deliverylocation}>
+                    <div className={styles.location}>
+                        <p>Your delivery location</p>
+                        <p>Ratlam</p>
+                    </div>
+                    <div>
+
+                    </div>
                 </div>
             </div>  
         </div>
