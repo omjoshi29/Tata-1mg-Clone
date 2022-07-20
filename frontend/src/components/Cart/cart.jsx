@@ -34,7 +34,47 @@ export const Cart = ()=>{
                 </div>
             </div>
             <div className={styles.rightcart}>
-
+                <div className={styles.careplan}>
+                    <img width={"100px"} src="https://onemg.gumlet.io/image/upload/v1625657833/ekjkxafxcqqg0oinr3fu.png"/>
+                    <p>You can save extra ₹74 on this order</p>
+                    <h4>Become a member</h4>
+                    <p>Care plan membership ₹165 ₹549 / 3 months</p>
+                    <div className={styles.knowmore}>
+                        <div>
+                             <p>Know More</p>
+                        </div>
+                        <div>
+                           <p>Add to cart</p>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div className={styles.coupon}>
+                        <div>
+                            <img src="https://res.cloudinary.com/du8msdgbj/image/upload/v1607414999/marketing/cvtnx1zh5we6atn3m7i0.svg"/>
+                            <h4>Apply Coupon</h4>
+                        </div>
+                        <div>
+                           <img width="25px" heigth="25px" src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS90vvlMUz57tkjGsbZaZ-wpfjur6Epkp_6Pg&usqp=CAU"/>
+                        </div>
+                    </div>
+                </div>
+                <div className={styles.health}>
+                   <div>
+                      <p>Check the health of your vital organs</p>
+                    </div>
+                   <div>
+                       <label>
+                         <input type="checkbox"/>
+                          Book Good Health Silver Package for just ₹649
+                       </label>
+                       <p>
+                          Get the tests done easily from your home. This package will help you
+                          in identifying potential disorders and deficiencies at an early stage.
+                       </p>
+                       <p>Pay later on home sample collection</p>
+                   </div>
+                
+                </div>
             </div>  
         </div>
     )

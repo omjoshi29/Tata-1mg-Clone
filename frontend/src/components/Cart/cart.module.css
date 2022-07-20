@@ -1,11 +1,13 @@
 .Main {
     margin-top: 80px;
+    display: flex;
+    gap:35px
 }
 .leftcart {
-    width:60%;
+    width:55%;
 }
 .leftcart>div {
-    margin-left: 20%;
+    margin-left: 18%;
 }
 .cartdata {
     width:100%;
@@ -54,3 +56,101 @@
     font-size: 15px;
     font-weight: 500; 
 }
+.rightcart {
+   width: 35%;
+}
+.careplan {
+    background-color: #ffffff;
+
+    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 15px 15px;
+}
+.careplan>p:nth-child(2){
+    color: #20868d;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.careplan>h4{
+    color:#6b605c;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.careplan>p:nth-child(4){
+    color: #91959e;
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 8px;
+}
+.careplan>div {
+    display: flex;
+    gap: 100px;
+    margin: 20px 0px;
+}
+.knowmore>div:nth-child(1) {
+    width: 180px;
+    height: 25px;
+    border: 2px solid #ff7469;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 10px;
+    color: #ff7469;
+    font-size: 14px;
+    font-weight: 600;
+}
+.knowmore>div:nth-child(2) {
+    width: 180px;
+    height: 25px;
+    border: 2px solid #ff7469;
+    background-color: #ff7469;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 10px;
+    color: #ffff;
+    font-size: 14px;
+    font-weight: 600;
+}
+.coupon {
+    display: flex;
+    justify-content: space-between;
+}
+.coupon>div:nth-child(1) {
+    display: flex;
+    gap:10px;
+    width:100%;
+}
+.health {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    height: 200px;
+}
+
+.health>div:nth-child(1) {
+    margin-top: 20px;
+     background-color: #fffcf8;
+     padding: 15px 15px;
+     font-size: 18px;
+}
+.health>div:nth-child(2) {
+    background-color: #ffffff;
+    padding: 15px 15px;
+}
+.health>div:nth-child(2)>label {
+    display: flex;
+    gap: 10px;
+}
+.health>div>p:nth-child(2) {
+   font-size: 13px;
+   width:250px;
+   padding-left: 25px;
+    padding-top: 8px;
+}
+.health>div>p:nth-child(3) {
+    font-size: 15px;
+    width:250px;
+    padding-left: 25px;
+    padding-top: 8px;
+    padding-bottom: -10px;
+    color: #59c067;
+ }
