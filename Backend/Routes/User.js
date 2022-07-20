@@ -25,6 +25,7 @@ Auth.post("/signup",async(req,res)=>{
      to: `+91${mobile}`
    })
   .then((message) => {console.log(message)
+    console.log("otp codneas")
     res.status(200).send({otp:data,username:mobile,message:"otp sent successfully"})})
   .catch((e)=>{console.log(e)
    res.send({otp:"",username:"",message:"invalid number"})})
