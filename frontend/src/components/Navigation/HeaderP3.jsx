@@ -258,7 +258,7 @@ const HeaderP3 = () => {
 
           <div className="subMenu_left">
             <div className="subDiv">
-              <ul>
+              <ul style={{ width: "210px" }}>
                 <li>
                   <Link to={"#"}>
                     <strong>Top brands in Healthcare Devices</strong>
@@ -579,6 +579,7 @@ const HeaderP3 = () => {
                 </li>
               </ul>
             </div>
+            <div className="vLine"></div>
             <div className="subDiv">
               <ul>
                 <li>
