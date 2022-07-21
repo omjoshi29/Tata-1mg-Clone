@@ -18,6 +18,12 @@ app.get("/",(req,res)=>{
     res.send("welcome to 1mg website")
 })
 
+app.post("/",(req,res)=>{
+    const data=req.body
+    console.log(data)
+    res.send("posted succesfuuly")
+})
+
 
 
 
