@@ -282,11 +282,13 @@ export const NavWrapper = styled.nav`
         }
 
         //submenu hidden
+        //left
         .subMenu_left {
           visibility: hidden;
           opacity: 0;
           position: absolute;
           top: 100%;
+
           height: auto;
           /* border: 1px solid black; */
           background-color: #ffffff;
@@ -316,11 +318,68 @@ export const NavWrapper = styled.nav`
                 line-height: 20px;
                 a {
                   strong {
-                    font-size: 12px;
+                    font-size: 13px;
                     color: #212121;
                   }
 
-                  font-size: 12px;
+                  font-size: 13px;
+                  color: #757575;
+                }
+
+                &:hover {
+                  a {
+                    strong {
+                      color: var(--hoverTextColor);
+                    }
+                    color: var(--hoverTextColor);
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        //right
+        .subMenu_right {
+          visibility: hidden;
+          opacity: 0;
+          position: absolute;
+          top: 100%;
+          right: 0;
+          height: auto;
+          /* border: 1px solid black; */
+          background-color: #ffffff;
+          width: auto;
+          display: flex;
+          gap: 20px;
+          padding: 15px;
+          border-radius: 0 0 3px 3px;
+          z-index: 10;
+          box-shadow: 0 2px 2px 0 rgb(0 0 0 / 20%);
+
+          .vLine {
+            border-left: 1px solid var(--border);
+          }
+          & > div {
+            width: auto;
+
+            ul {
+              /* width: auto; */
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              width: 160px;
+              margin-bottom: 10px;
+
+              li {
+                line-height: 20px;
+                a {
+                  strong {
+                    font-size: 13px;
+                    color: #212121;
+                  }
+
+                  font-size: 13px;
                   color: #757575;
                 }
 
@@ -340,6 +399,11 @@ export const NavWrapper = styled.nav`
         //on hover perent
         &:hover {
           .subMenu_left {
+            visibility: visible;
+            opacity: 1;
+          }
+
+          .subMenu_right {
             visibility: visible;
             opacity: 1;
           }
