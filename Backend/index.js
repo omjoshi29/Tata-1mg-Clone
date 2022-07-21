@@ -5,6 +5,14 @@ const app=express()
 const cors=require("cors")
 require("dotenv").config()
 const Auth=require("./Routes/User")
+const Products=require("./Routes/Product")
+const Prod=require("./Mongo/productsmongo")
+
+const Addressdata=require("./Routes/Address")
+
+const Cartdata=require("./Routes/Cartpage")
+
+
 
 
 
@@ -14,12 +22,15 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use("/",Auth)
 
+app.use("/",Products)
+
+app.use("/",Cartdata)
+
+app.use("/",Addressdata)
+
 app.get("/",(req,res)=>{
     res.send("welcome to 1mg website")
 })
-
-
-
 
 
 
