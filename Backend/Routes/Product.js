@@ -46,6 +46,7 @@ Products.get("/filter",async(req,res)=>{
         console.log(req.query.ratings,"check num")
         data=await Prod.find({ratings:{$gte:req.query.ratings}})
         console.log(data,"hreee1121")
+        console.log("fount")
     }
 
     
