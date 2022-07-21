@@ -17,7 +17,7 @@ const HeaderP2 = () => {
     fontSize: "16px",
   };
   let city;
-  const getLocation = () => {
+  const getL = () => {
     navigator.geolocation.getCurrentPosition(showLocation);
   };
 
