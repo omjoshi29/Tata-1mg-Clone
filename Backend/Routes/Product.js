@@ -55,6 +55,19 @@ Products.get("/filter",async(req,res)=>{
 })
 
 
+//http://localhost:8080/slider?&limit=10&skip=0
+
+// on button next increase the skip value by 10  
+// on prev button decrase the skip value by 10
+//total values in db 53
+Products.get("/slider",async(req,res)=>{
+    const{limit,skip}=req.query
+    console.log(limit,skip)
+    let data=await Prod.find({}).limit(limit).skip(skip)
+
+    res.send({data:data,message:"valid data"})
+})
+
 
 
 module.exports=Products

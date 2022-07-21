@@ -8,8 +8,6 @@ const AddressSchema=mongoose.Schema({
     address2:String,
     city:String,
     pincode:String
-
-
 })
 
 const Address=mongoose.model("addressmg",AddressSchema)
