@@ -16,6 +16,31 @@ const HeaderP2 = () => {
     height: "100%",
     fontSize: "16px",
   };
+
+  const getLocation = () => {
+    navigator.geolocation.getCurrentPosition(showLocation);
+  };
+
+  const showLocation = async (pos) => {
+    let { lattitude, longitude } = pos.coords;
+    console.log(pos);
+    showDataByGeoLocation(pos.coords.latitude, pos.coords.longitude);
+  };
+
+  const showDataByGeoLocation = async (lattitude, longitude) => {
+    let url1 = `https://api.openweathermap.org/data/2.5/onecall?lat=${lattitude}&lon=${longitude}&exclude={part}&appid=85f990cdfc2094625437070b3f3b2977&units=metric`;
+    let res1 = await fetch(url1); //here i am getting daily data by adding lat and lon into one call API
+    let data1 = await res1.json();
+
+    let res = await fetch(
+      `https://us1.locationiq.com/v1/reverse.php?key=pk.456518217705258731c8c7089e3a45d0&lat=${lattitude}&lon=${longitude}&format=json`
+    );
+    let loc = await res.json();
+
+    city = loc.address.city;
+
+    let dayArray = data1.daily;
+  };
   return (
     <div className="header_2Con">
       <div className="firstCon">
