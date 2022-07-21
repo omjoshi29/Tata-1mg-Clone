@@ -7,8 +7,8 @@ import Button from "./components/Button";
 function App() {
   return (
     <div className="App">
-      {/* <Navigation /> */}
-      <Cart/>
+      <Navigation />
+      {/* <Cart /> */}
     </div>
   );
 }
