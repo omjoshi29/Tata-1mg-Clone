@@ -82,7 +82,7 @@ Auth.get("/google/callback",async(req,res)=>{
 
     const data=await mydata(id_token,access_token)
     console.log(data,"viewing!!")
-    console.log("heloooeas")
+
   // const userObjectId = mongoose.Types.ObjectId(data._id)
   // await Blacklist.insertMany({user_id:userObjectId})
   res.send(data)
