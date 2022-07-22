@@ -471,3 +471,40 @@ export const NavWrapper = styled.nav`
     }
   }
 `;
+
+export const HiddenHead=styled.div`
+position:absolute;
+top:5%;
+right:10%;
+box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+background:white;
+z-index:12;
+width:250px;
+cursor:pointer;
+${(props)=>props.val?`display:block;`:`display:none;`}
+
+ul{
+  list-style:none;
+}
+li{
+  height:50px;
+  font-size:20px;
+  text-align:center;
+  margin-top:10px;
+  font-weight:bold;
+}
+li:hover{
+  color:#ff6f61;
+}
+`
+export const Li=styled.li`
+
+.linkref1{
+  ${(props)=>props.val==""?`display:block`:`display:none`}
+
+}
+
+.linkref2{
+  ${(props)=>props.val!=""?`display:block`:`display:none`}
+}
+`

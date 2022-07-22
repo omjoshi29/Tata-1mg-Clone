@@ -3,17 +3,24 @@ import OneMgLogo from "../../assets/Icons/logo.svg";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import CartICon from "../../assets/Icons/cart.svg";
+import { useSelector,useDispatch } from "react-redux";
+import{HiddenHead,Li} from "./styles/Navigation.styled"
+import{userotp,username} from "../../Redux/action"
 const HeaderP1 = () => {
   const params = useParams();
-
+  const dispatch=useDispatch()
+  const state=useSelector((state)=>state)
+  console.log(state.otp=="","true or not")
+  const[del,setdel]=React.useState(false)
+  console.log(state,"in navigation part")
   console.log()
   return (
-    <div className="header_1Con">
+    <div className="header_1Con" >
       <div className="firstPart">
-        <div className="logoCon">
+        <div className="logoCon" onMouseEnter ={()=>setdel(false)}>
           <img src={OneMgLogo} alt="" />
         </div>
-        <ul className="tabList">
+        <ul className="tabList" >
           <li>
             <Link to="#">MEDICINES</Link>
           </li>
@@ -36,13 +43,38 @@ const HeaderP1 = () => {
           </li>
         </ul>
       </div>
-      <div className="secondPart">
+      <div className="secondPart" >
         <ul className="list">
-          <li>
-            <Link to={"/login"}>Login</Link> | <Link to={"/login"}>Sign Up</Link>
-          </li>
-          <li>
-            <Link to={"#"}>Offers</Link>
+          <Li val={state.otp}>
+              <Link className="linkref1" to={"/login"}>Login | </Link><Link className="linkref1" to={"/login"}>Sign Up</Link>
+              <Link className="linkref2" to={"#"} onMouseEnter ={()=>setdel(!del)}>hello {state.username}</Link>
+              <HiddenHead val={del}>
+                <ul>
+                  <li>Hi There</li>
+                  <hr style={{color:"grey"}}/>
+                </ul>
+                <ul>
+                  <li>View profile</li>
+                </ul>
+                <ul>
+                  <li>My orders</li>
+                </ul>
+                <ul>
+                  <li>Manage Payments</li>
+                </ul>
+                <ul>
+                  <li>My lab test</li>
+                </ul>
+                <ul>
+                  <li onClick={()=>{
+                    dispatch(userotp(""))
+                    dispatch(username(""))
+                  }}>Logout</li>
+                </ul>
+              </HiddenHead> 
+          </Li>
+          <li onMouseEnter ={()=>setdel(false)}>
+            <Link to={"#"} >Offers</Link>
           </li>
           <li>
             <Link to={"#"}>
@@ -59,3 +91,8 @@ const HeaderP1 = () => {
 };
 
 export default HeaderP1;
+
+
+
+
+
