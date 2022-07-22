@@ -14,7 +14,11 @@ const Wrapper = styled.button`
 `;
 
 const Button = ({ styles }) => {
-  return <Wrapper {...styles}>{styles.text}</Wrapper>;
+  return (
+    <Wrapper onClick={styles.onClick} {...styles}>
+      {styles.text}
+    </Wrapper>
+  );
 };
 
 export default Button;
