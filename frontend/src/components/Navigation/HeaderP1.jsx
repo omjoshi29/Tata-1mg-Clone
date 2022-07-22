@@ -38,7 +38,7 @@ const HeaderP1 = () => {
       <div className="secondPart">
         <ul className="list">
           <li>
-            <Link to={"#"}>Login</Link> | <Link to={"#"}>Sign Up</Link>
+            <Link to={"/login"}>Login</Link> | <Link to={"/login"}>Sign Up</Link>
           </li>
           <li>
             <Link to={"#"}>Offers</Link>

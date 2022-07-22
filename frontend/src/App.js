@@ -7,11 +7,17 @@ import Button from "./components/Button";
 import { Address } from "./components/Cart/address";
 import { Delivery } from "./components/Cart/delivery";
 import Offer from "./components/Offer/Offer";
+import{Routes,Route} from "react-router-dom"
+import {Login} from "./components/Signup/Login"
 function App() {
   return (
     <div className="App">
-      <Navigation />
+      {/* <Navigation /> */}
       {/* <Offer /> */}
+      <Routes>
+        <Route path="/" element={<Navigation/>}/>
+         <Route path="/login" element={<Login/>}></Route>
+      </Routes>
     </div>
   );
 }

@@ -41,11 +41,7 @@ let{username}=req.body
 
 let data=await verfieddata(username)
 
-return res.cookie("access_token",12334323,{
-  httpOnly: true,
-  secure: process.env.NODE_ENV === "production",
-}).status(200)
-.json({data:data,message:"verified successfully"});
+res.send({data:data,message:"verfied successfully"})
 // console.log(data,"recieved")
 // res.status(200).send({data:data,message:"verified successfully"})
 })
