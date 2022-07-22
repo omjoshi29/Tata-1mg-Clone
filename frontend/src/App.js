@@ -7,11 +7,12 @@ import Button from "./components/Button";
 import { Address } from "./components/Cart/address";
 import { Delivery } from "./components/Cart/delivery";
 import Offer from "./components/Offer/Offer";
+import Footer from "./components/Footer/Footer";
 function App() {
   return (
     <div className="App">
       <Navigation />
-      {/* <Offer /> */}
+      <Footer />
     </div>
   );
 }
