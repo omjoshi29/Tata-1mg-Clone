@@ -169,7 +169,9 @@ export const FooterWrapper = styled.div`
 
           .socials {
             display: flex;
+            margin-top: 10px;
             margin-bottom: 5px;
+            /* border: 1px solid black; */
             span {
               margin-right: 12px;
               a {
