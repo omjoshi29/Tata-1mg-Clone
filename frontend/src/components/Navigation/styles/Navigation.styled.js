@@ -488,8 +488,8 @@ ul{
 }
 li{
   height:50px;
-  font-size:20px;
-  text-align:center;
+  font-size:14px;
+  margin-left:5%;
   margin-top:10px;
   font-weight:bold;
 }

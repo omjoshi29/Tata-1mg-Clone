@@ -46,12 +46,12 @@ const HeaderP1 = () => {
       <div className="secondPart" >
         <ul className="list">
           <Li val={state.otp}>
-              <Link className="linkref1" to={"/login"}>Login | </Link><Link className="linkref1" to={"/login"}>Sign Up</Link>
+              <Link className="linkref1" to={"/login"}>Login | Signup</Link>
               <Link className="linkref2" to={"#"} onMouseEnter ={()=>setdel(!del)}>hello {state.username}</Link>
               <HiddenHead val={del}>
                 <ul>
-                  <li>Hi There</li>
-                  <hr style={{color:"grey"}}/>
+                  <li>Hi,There</li>
+                  <hr style={{color:"grey",marginTop:"-10%"}}/>
                 </ul>
                 <ul>
                   <li>View profile</li>
