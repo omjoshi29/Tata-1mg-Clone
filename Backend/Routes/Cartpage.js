@@ -88,7 +88,7 @@ Cartdata.post("/updatequant",async(req,res)=>{
 Cartdata.post("/removequant",async(req,res)=>{
     const {_id,username,obj}=req.body;
 
-    // console.log(_id)
+    console.log(_id)
     let data=await Cart.findOne({username})
     let newdata=data.product_id.filter((ele)=>ele!=_id)
     await Cart.updateOne({username},{"product_id":newdata})
