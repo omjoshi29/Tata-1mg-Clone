@@ -23,6 +23,8 @@ function App() {
          <Route path="/login" element={<Login/>}></Route>
          <Route path="/loading/:id" element={<LoadingGmail/>}></Route>
       </Routes>
+      </div>
+  )
 }
 
 export default App;
