@@ -13,6 +13,7 @@ box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 z-index:12;
 margin-top:10%;
 display:flex;
+padding:25px;
 `
 
 
@@ -77,10 +78,22 @@ margin-top:3%;
 cursor:pointer;
 text-align:center;
 position:relative;
+gap:10px;
 p{
-    position:absolute;
-    left:42%;
-    top:15%;
+    margin-bottom:2%;
+    
 }
 
+
+`
+
+export const InputDiv=styled.div`
+
+
+input{
+    &:focus{
+        outline:0;
+
+    }
+}
 `

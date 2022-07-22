@@ -18,7 +18,7 @@ export const Login = () => {
     slidesToScroll: 1
   };
   return (
-    <Mainbox >
+    <Mainbox  >
         <Slider1>
         <Slider {...settings}>
           <div>
