@@ -34,7 +34,7 @@ const Footer = () => {
 
   const signUpB2 = {
     bg: "#ff6f61",
-    text: "Sign UP",
+    text: "SIGN UP",
     width: "97px",
     br: "3px",
     fontWeight: "Bold",

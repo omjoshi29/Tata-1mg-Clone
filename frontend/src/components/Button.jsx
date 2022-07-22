@@ -13,9 +13,10 @@ const Wrapper = styled.button`
   cursor: pointer;
 `;
 
-const Button = ({ styles }) => {
+const Button = ({ styles, onClick }) => {
+  // console.log(onClick);
   return (
-    <Wrapper onClick={styles.onClick} {...styles}>
+    <Wrapper onClick={onClick} {...styles}>
       {styles.text}
     </Wrapper>
   );
