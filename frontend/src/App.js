@@ -7,6 +7,8 @@ import Button from "./components/Button";
 import { Address } from "./components/Cart/address";
 import { Delivery } from "./components/Cart/delivery";
 import Offer from "./components/Offer/Offer";
+import { OrderSummary } from "./components/Cart/ordersummary";
+import { Payment } from "./components/payment/payment";
 import{Routes,Route} from "react-router-dom"
 import {Login} from "./components/Signup/Login"
 import{LoadingGmail} from "./components/Signup/LoadingGmail"
@@ -21,8 +23,6 @@ function App() {
          <Route path="/login" element={<Login/>}></Route>
          <Route path="/loading/:id" element={<LoadingGmail/>}></Route>
       </Routes>
-    </div>
-  );
 }
 
 export default App;

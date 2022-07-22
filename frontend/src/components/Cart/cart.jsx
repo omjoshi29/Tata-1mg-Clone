@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Button from "../Button";
 import styles from "./cart.module.css";
-
+import { Total } from "./Total";
 export const Cart = () => {
   const [count, setCount] = useState(1);
   const button = {
@@ -118,34 +118,7 @@ export const Cart = () => {
             <p>Add care plan to cart</p>
           </div>
         </div>
-        <div className={styles.prdata}>
-          <div className={styles.discount}>
-            <p>Item Total(MRP)</p>
-            <p>₹2445</p>
-          </div>
-          <div className={styles.discount}>
-            <p>Price Discount</p>
-            <p>-₹700</p>
-          </div>
-          <hr />
-          <div className={styles.discount}>
-            <p>Shipping Fee</p>
-            <p>₹0</p>
-          </div>
-          <div className={styles.discount}>
-            <p>Packaging and Handling Chargesⓘ</p>
-            <p>₹5</p>
-          </div>
-          <hr />
-          <div className={styles.paid}>
-            <p>To be paid</p>
-            <p>₹1750</p>
-          </div>
-          <div className={styles.paid1}>
-            <p>To be paid</p>
-            <p>₹700</p>
-          </div>
-        </div>
+        <div><Total/></div>
         <div className={styles.deliverylocation}>
           <div className={styles.location}>
             <p>Your delivery location</p>

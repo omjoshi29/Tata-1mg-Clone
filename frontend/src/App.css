@@ -11,7 +11,7 @@ body {
   background-color: var(--background);
   max-width: 100%;
   font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #ffffff;
+  background-color: #f8f8f8;
 }
 
 :root {
