@@ -12,7 +12,7 @@ import { Payment } from "./components/payment/payment";
 function App() {
   return (
     <div className="App">
-      <Payment/>
+      
     </div>
   );
 }
