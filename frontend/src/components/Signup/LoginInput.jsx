@@ -1,11 +1,12 @@
 import React from 'react'
 import Button from "../Button"
-import{GmailButton, LoginButton} from "./Login1"
+import{GmailButton, LoginButton,InputDiv} from "./Login1"
 import GoogleIcon from '@mui/icons-material/Google';
 import axios from 'axios'
 import{userotp,username} from "../../Redux/action"
 import { useSelector,useDispatch } from 'react-redux'
 import { useNavigate } from "react-router-dom";
+import Google from "../../assets/app/google.png"
 export const LoginInput = () => {
     const[number,setNumber]=React.useState()
     let navigate = useNavigate();
@@ -40,15 +41,16 @@ export const LoginInput = () => {
         <h2 style={{marginLeft:"10%"}}>Login</h2>
         <p>Get access to your orders, lab tests & doctor consultations</p>
 
-        <div>
+        <InputDiv>
             <input placeholder='Enter Mobile Number' type="text" pattern="\d*" maxlength="10" ref={ref1} style={{borderTop:"none",borderLeft:"none",borderRight:"none",width:"80%",margin:"10%"}} onChange={(e)=>setNumber(e.target.value)}/>
-        </div>
+        </InputDiv>
 
         <LoginButton onClick={sendData}>Continue</LoginButton>
 
-        <GmailButton onClick={gmailData}><GoogleIcon style={{marginTop:"5px",marginLeft:"-80px"}}/><p>signup with gmail</p></GmailButton>
+        <GmailButton style={{display:"flex",alignItems:"center",justifyContent:"center"}} onClick={gmailData}><img width="25px"  src={Google}/><p>signup with gmail</p></GmailButton>
         
     </div>
 
   )
 }
+{/* <GoogleIcon style={{marginTop:"5px",marginLeft:"-80px"}}/> */}

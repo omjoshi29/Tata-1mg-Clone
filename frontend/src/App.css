@@ -9,7 +9,7 @@ body {
   padding: 0;
   margin: 0;
   background-color: var(--background);
-  /* max-width: 100%; */
+  max-width: 100%;
   font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #f8f8f8;
 }
@@ -19,3 +19,5 @@ body {
   --background: #ffffff;
   --hoverTextColor: #ff6f61;
 }
+
+
