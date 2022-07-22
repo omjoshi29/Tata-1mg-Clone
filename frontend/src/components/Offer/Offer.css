@@ -1,4 +1,4 @@
-body {
+/* body {
     background: whitesmoke;
 }
 
@@ -17,7 +17,7 @@ body {
     cursor: pointer;
     margin-top: 2%;
     background: white;
-    /* position: sticky; */
+    
 }
 
 #offers_name>div {
@@ -75,4 +75,4 @@ body {
     #offers_coupons {
         width: 90%;
     }
-}
+} */
