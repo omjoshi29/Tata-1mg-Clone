@@ -8,11 +8,11 @@ import { Address } from "./components/Cart/address";
 import { Delivery } from "./components/Cart/delivery";
 import Offer from "./components/Offer/Offer";
 import { OrderSummary } from "./components/Cart/ordersummary";
+import { Payment } from "./components/Cart/payment";
 function App() {
   return (
     <div className="App">
-      <OrderSummary/>
-      
+      <Payment/>
     </div>
   );
 }
