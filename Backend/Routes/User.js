@@ -6,6 +6,7 @@ const {getTokens1,mydata}=require("../control/googleAuth")
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require('twilio')(accountSid, authToken);
+const mongoose=require("mongoose")
 
 require("dotenv").config()
 
@@ -41,11 +42,7 @@ let{username}=req.body
 
 let data=await verfieddata(username)
 
-return res.cookie("access_token",12334323,{
-  httpOnly: true,
-  secure: process.env.NODE_ENV === "production",
-}).status(200)
-.json({data:data,message:"verified successfully"});
+res.send({data:data,message:"verfied successfully"})
 // console.log(data,"recieved")
 // res.status(200).send({data:data,message:"verified successfully"})
 })
@@ -85,9 +82,22 @@ Auth.get("/google/callback",async(req,res)=>{
 
   // const userObjectId = mongoose.Types.ObjectId(data._id)
   // await Blacklist.insertMany({user_id:userObjectId})
-  res.send(data)
+  // res.send(data)
   // res.redirect(`http://localhost:3000/afterOuth/${data._id}`)
+  res.redirect(`http://localhost:3000/loading/${data._id}`)
 
+})
+
+Auth.get("/gmailtoken/:id",async(req,res)=>{
+
+  const {id}=req.params
+  console.log(id,"first")
+  const userObjectId = mongoose.Types.ObjectId(id);
+  console.log(userObjectId,"second")
+  let data=await User.findOne({_id:userObjectId})
+
+  console.log(data,"third")
+  res.send({data:data,message:"verfied successfully"})
 })
 
 

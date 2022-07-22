@@ -2,6 +2,7 @@ const User=require("../Mongo/usermongo")
 var jwt = require('jsonwebtoken');
 const Auth = require("../Routes/User");
 
+
 require("dotenv").config()
 let secreat=process.env.SECREAT_KEY
 
@@ -13,6 +14,22 @@ function Otpgenereator(){
 }
 
 async function verfieddata(username){
+
+  let present=await User.findOne({username})
+  if(present)
+  {
+    let token=jwt.sign({username:username},"SUPER123",{
+      expiresIn:"2h"
+    })
+   let refreshToken=jwt.sign({username:username},"SUPER123",{
+      expiresIn:"5h"
+    })
+    await User.updateOne({username},{$set:{token:token,refreshToken:refreshToken}})
+
+    let data=await User.findOne({username})
+    return data
+
+  }
 
     let token=jwt.sign({username:username},"SUPER123",{
         expiresIn:"2h"
