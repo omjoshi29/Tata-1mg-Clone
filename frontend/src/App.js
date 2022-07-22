@@ -8,13 +8,14 @@ import { Address } from "./components/Cart/address";
 import { Delivery } from "./components/Cart/delivery";
 import Offer from "./components/Offer/Offer";
 import Footer from "./components/Footer/Footer";
-import SimpleSlider from "./components/Sliders/BannerSlider";
+// import SimpleSlider from "./components/Sliders/BannerSlider";
+import { MySlider } from "./components/Sliders/BannerSlider";
+import Home from "./pages/Home";
+
 function App() {
   return (
     <div className="App">
-      {/* <Navigation />
-      <Footer /> */}
-      <SimpleSlider />
+      <Home />
     </div>
   );
 }

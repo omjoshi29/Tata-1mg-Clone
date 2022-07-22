@@ -3,17 +3,33 @@ import "slick-carousel/slick/slick-theme.css";
 import styled from "styled-components";
 import React, { Component } from "react";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 
 const Wrapper = styled.div`
-  border: 1px solid black;
-  width: 50%;
+  *:focus {
+    outline: 0;
+  }
   margin: auto;
-  position: relative;
+  /* border: 1px solid black; */
 
+  /* margin-top: 250px; */
+  /* width: 50%; */
+
+  height: ${(props) => (props.height ? props.height : "auto")};
+  width: ${(props) => (props.width ? props.width : "auto")};
+  /* margin: auto; */
+  position: relative;
+  img {
+    height: 100%;
+    width: 100%;
+  }
   ul {
+    bottom: 12px;
+
     position: absolute;
-    /* border: 1px solid black; */
-    top: 0;
+  }
+
+  img {
   }
 `;
 
@@ -39,59 +55,31 @@ function SamplePrevArrow(props) {
   );
 }
 
-export default class SimpleSlider extends Component {
-  render() {
-    const settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      nextArrow: <SampleNextArrow />,
-      prevArrow: <SamplePrevArrow />,
-    };
-    return (
-      <Wrapper>
-        <h2> Single Item</h2>
-        <Slider {...settings}>
-          <div>
-            <h3>1</h3>
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-          <div>
-            <h3>1</h3>
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-        </Slider>
-      </Wrapper>
-    );
-  }
-}
+export const BannerSlider = ({ data, height, width, arrows }) => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows,
+    //    nextArrow: <SampleNextArrow />,
+    //   prevArrow: <SamplePrevArrow />,
+  };
+
+  return (
+    <Wrapper height={height} width={width}>
+      <Slider {...settings}>
+        {data.map((el, i) => {
+          return (
+            <div key={i}>
+              <Link to={el.link}>
+                <img src={el.imgUrl} alt="" />
+              </Link>
+            </div>
+          );
+        })}
+      </Slider>
+    </Wrapper>
+  );
+};
