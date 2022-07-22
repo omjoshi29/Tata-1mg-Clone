@@ -6,6 +6,7 @@ import CartICon from "../../assets/Icons/cart.svg";
 const HeaderP1 = () => {
   const params = useParams();
 
+  console.log()
   return (
     <div className="header_1Con">
       <div className="firstPart">

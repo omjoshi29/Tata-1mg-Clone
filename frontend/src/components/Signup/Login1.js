@@ -3,13 +3,13 @@ import styled from "styled-components";
 
 
 export const Mainbox=styled.div`
-border:1px solid red;
+
 height:350px;
 width:750px;
 margin:auto;
 border-radius:10px;
 background:white;
-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 z-index:12;
 margin-top:10%;
 display:flex;
@@ -18,7 +18,7 @@ display:flex;
 
 
 export const Slider1=styled.div`
-border:1px solid black;
+
 width:50%;
 height:100%;
 margin-top:5%;
@@ -38,7 +38,7 @@ p{
 
 export const Slider2=styled.div`
 
-border:1px solid black;
+
 width:50%;
 height:100%;
 p{
@@ -59,5 +59,28 @@ color:white;
 margin-left:10%;
 border:none;
 border-radius:5px;
+cursor:pointer;
+
+`
+
+export const GmailButton=styled.button`
+
+width:80%;
+height:40px;
+background:white;
+color:black;
+margin-left:10%;
+border:none;
+border-radius:5px;
+border:1px solid grey;
+margin-top:3%;
+cursor:pointer;
+text-align:center;
+position:relative;
+p{
+    position:absolute;
+    left:42%;
+    top:15%;
+}
 
 `

@@ -50,15 +50,15 @@ export const LoginOTP = () => {
 
     }
   return ( 
-    <div>
-        <h2>Login</h2>
+    <div style={{marginTop:"5%"}}>
+        <h2 style={{marginLeft:"10%"}}>Verify OTP</h2>
         <p>Get access to your orders, lab tests & doctor consultations</p>
 
         <div>
             <input placeholder='one time password' type ="text" maxLength={5} ref={ref1} style={{borderTop:"none",borderLeft:"none",borderRight:"none",width:"80%",margin:"10%"}} onChange={(e)=>setopt(e.target.value)}/>
         </div>
 
-        <LoginButton onClick={verfiyData}>verfiyData</LoginButton>
+        <LoginButton onClick={verfiyData}>Done</LoginButton>
 
         <LoginButton style={{width:"30%",marginTop:"5%"}} onClick={()=>{
             dispatch(userotp(""))

@@ -9,6 +9,7 @@ import { Delivery } from "./components/Cart/delivery";
 import Offer from "./components/Offer/Offer";
 import{Routes,Route} from "react-router-dom"
 import {Login} from "./components/Signup/Login"
+import{LoadingGmail} from "./components/Signup/LoadingGmail"
 function App() {
   return (
     <div className="App">
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigation/>}/>
          <Route path="/login" element={<Login/>}></Route>
+         <Route path="/loading/:id" element={<LoadingGmail/>}></Route>
       </Routes>
     </div>
   );
