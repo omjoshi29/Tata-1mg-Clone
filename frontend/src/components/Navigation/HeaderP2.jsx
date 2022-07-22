@@ -11,7 +11,7 @@ const HeaderP2 = () => {
     text: "Quick Order",
     width: "140px",
     br: "3px",
-    fontWeight: "bold",
+
     color: "#ffffff",
     height: "100%",
     fontSize: "16px",
