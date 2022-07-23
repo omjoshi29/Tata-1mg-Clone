@@ -12,17 +12,13 @@ import { Payment } from "./components/payment/payment";
 import{Routes,Route} from "react-router-dom"
 import {Login} from "./components/Signup/Login"
 import{LoadingGmail} from "./components/Signup/LoadingGmail"
-import{PrivateRouter} from "./Routes/PrivateRouter"
+import{PrivateRouter} from "./Routes/PrivateRouter";
 function App() {
   return (
     <div className="App">
       {/* <Navigation /> */}
       {/* <Offer /> */}
-      <Routes>
-        <Route path="/" element={<PrivateRouter><Navigation/></PrivateRouter>}/>
-         <Route path="/login" element={<Login/>}></Route>
-         <Route path="/loading/:id" element={<LoadingGmail/>}></Route>
-      </Routes>
+    
       </div>
   )
 }

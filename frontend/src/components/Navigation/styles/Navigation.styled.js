@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const NavWrapper = styled.nav`
   width: 100%;
   //Part - 1
+  /* * {
+    border: 1px solid black;
+  } */
   .header_1Con {
     height: 48px;
     box-sizing: border-box;
@@ -107,6 +110,8 @@ export const NavWrapper = styled.nav`
     height: 46px;
     border-bottom: 1.5px solid var(--border);
     box-sizing: border-box;
+    width: 100%;
+    /* border: 1px solid black; */
     padding: 6px 0;
     display: flex;
     & > div {
@@ -214,8 +219,9 @@ export const NavWrapper = styled.nav`
         display: flex;
         align-items: center;
         height: 100%;
-        width: 450px;
+        /* width: 450px; */
         max-width: 450px;
+        /* flex-wrap: wrap; */
 
         p {
           margin-right: 15px;
