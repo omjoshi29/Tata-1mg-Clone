@@ -18,7 +18,7 @@ export const LoadingGmail = () => {
     const navigate=useNavigate()
     const dispatch=useDispatch()
 
-    axios.get(`http://localhost:8080/gmailtoken/${id}`)
+    axios.get(`https://unit-6projectbackend.herokuapp.com/gmailtoken/${id}`)
     .then(({data})=>{
         console.log(data,"getting the token")
         console.log(data.data)

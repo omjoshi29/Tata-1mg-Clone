@@ -29,7 +29,7 @@ export const LoginOTP = () => {
         }
         else
         {
-            axios.post("http://localhost:8080/signupverfied",{username:state.username})
+            axios.post("https://unit-6projectbackend.herokuapp.com/signupverfied",{username:state.username})
             .then(({data})=>{
                 console.log(data,"getting the token")
                 console.log(data.data)

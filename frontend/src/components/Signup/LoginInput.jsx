@@ -17,7 +17,7 @@ export const LoginInput = () => {
 
     const sendData=()=>{
         console.log(number)
-        axios.post("http://localhost:8080/signup",{mobile:Number(number)})
+        axios.post("https://unit-6projectbackend.herokuapp.com/signup",{mobile:Number(number)})
         .then((data)=>{
             console.log(data,"recieved")
             console.log(data.data)
@@ -45,7 +45,7 @@ export const LoginInput = () => {
     }
 
     const gmailData=()=>{
-        window.location.href="http://localhost:8080/google"
+        window.location.href="https://unit-6projectbackend.herokuapp.com/google"
     }
 
 

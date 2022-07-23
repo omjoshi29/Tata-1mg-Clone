@@ -16,7 +16,7 @@ export const PrivateRouter = ({children}) => {
     console.log(Cookies.get("refreshToken"),"also")
 
     React.useEffect(()=>{
-      axios.post("http://localhost:8080/verifytoken",{token:Cookies.get("token"),refreshToken:Cookies.get("refreshToken"),username:state.username})
+      axios.post("https://onemgbackend.herokuapp.com/verifytoken",{token:Cookies.get("token"),refreshToken:Cookies.get("refreshToken"),username:state.username})
       .then((data)=>{
         console.log(data.data.message,"all inside private")
         if(data.data.message=="update needed")
@@ -28,7 +28,6 @@ export const PrivateRouter = ({children}) => {
         else if(data.data.message=="login required")
         {
           navigate("/login",{replace:true})
-          console.log("wait")
         }
       })
     },[])
