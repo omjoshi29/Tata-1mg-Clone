@@ -130,3 +130,24 @@ body {
     font-weight: bold;
     cursor: pointer;
 }
+
+.pagination {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    margin: auto;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+.numcolor {
+    color: #FF6F61;
+}
+
+.othernum {
+    cursor: pointer;
+}
+
+.othernum:hover {
+    color: #FF6F61;
+}
