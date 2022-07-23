@@ -13,10 +13,11 @@ Addressdata.post("/address/:username",async(req,res)=>{
 
     let data=new Address({
         username:username,
-        address1,
-        address2,
+        address,
+        mobilenumber,
         city,
-        pincode
+        pincode,
+        locality
     })
     
     await data.save()

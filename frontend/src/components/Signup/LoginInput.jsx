@@ -21,8 +21,21 @@ export const LoginInput = () => {
         .then((data)=>{
             console.log(data,"recieved")
             console.log(data.data)
-            dispatch(userotp(data.data.otp))
-            dispatch(username(number))
+            console.log(data.data.message)
+
+            if(data.data.message=="invalid number")
+            {
+                alert("using twilio in free trial so not all mobile number gets otp")
+                alert("currently your otp is 12345")
+                dispatch(userotp("12345"))
+                dispatch(username(number))
+            }
+            else
+            {
+                dispatch(userotp(data.data.otp))
+                dispatch(username(number))
+            }
+
             
         })
         // dispatch(userotp("12345"))
