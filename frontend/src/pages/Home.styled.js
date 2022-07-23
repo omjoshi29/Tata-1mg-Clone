@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HomeWrapper = styled.div`
-  border: 1px solid black;
+  /* border: 1px solid black; */
   background-color: #f6f6f6;
   height: auto;
   //First container
