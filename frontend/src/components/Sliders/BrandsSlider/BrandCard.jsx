@@ -11,6 +11,9 @@ const Wrapper = styled.div`
   padding: 0px 0px;
   background-color: white;
   width: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
@@ -25,8 +28,9 @@ const Wrapper = styled.div`
     /* border: 1px solid red; */
     justify-content: center;
     box-sizing: border-box;
-    padding: 20px 15px;
+    padding: 20px 0px;
     color: #212121;
+    /* border: 1px solid black; */
     span {
       /* height: 120px;
       width: 120px; */

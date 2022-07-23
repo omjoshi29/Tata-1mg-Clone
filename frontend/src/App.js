@@ -21,7 +21,7 @@ function App() {
       <Navigation />
       {/* <Offer /> */}
       <Home />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

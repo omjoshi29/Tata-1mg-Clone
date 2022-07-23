@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const HomeWrapper = styled.div`
   border: 1px solid black;
   background-color: #f6f6f6;
-
+  height: auto;
   //First container
   .topBanner {
     max-width: 100%;
@@ -38,6 +38,7 @@ export const HomeWrapper = styled.div`
     h1 {
       font-size: 19px;
       line-height: 20px;
+
       color: #666666;
     }
   }
@@ -92,6 +93,7 @@ export const HomeWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     span {
+      font-weight: bold;
       font-size: 18px;
       color: #212121;
       /* border: 1px solid black; */

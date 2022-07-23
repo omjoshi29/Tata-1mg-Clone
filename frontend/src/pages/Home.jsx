@@ -8,6 +8,8 @@ import Button from "../components/Button";
 // import { BrandsSlider } from "../components/Sliders/BrandsSlider";
 import { SliderTypeThree } from "../components/Sliders/SliderTypeThree/SliderTypeThree";
 import axios from "axios";
+import { ProductSlider } from "../components/Sliders/ProductSlider/ProductSlider";
+import Upperfooter from "./Descripton/Upperfooter";
 let Banner = [
   {
     imgUrl:
@@ -272,25 +274,235 @@ let PopularCategoriesData = [
     title: "Elderly Care",
   },
 ];
+
+let ShopByHealthData = [
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/hgzkyio2rphkn6wjif94.png",
+    title: "Diabetes Care",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/zo7sc14nqpt6ebeojkvr.png",
+    title: "Cardiac Care",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/ttagxlnxulsvkyv9fetr.png",
+    title: "Stomach Care",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/ijgn7fhyq8ig0welmrcp.png",
+    title: "Liver Care",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/zytsldnf5mvb0u19ydep.png",
+    title: "Kidney Care",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/ywohqm4txnehsmibypaz.png",
+    title: "Bone, Joint & Muscle Care",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/hn5bpr1ci2do5kdub51v.png",
+    title: "Pain Relief",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/hr9vysj9cy0sfjs3mpg0.png",
+    title: "Respiratory Care",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/t0ehbhfrkughfxoygvs2.png",
+    title: "Eye Care",
+  },
+];
+
+let HealthCareDevicesData = [
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/swzbhfnn4l9ne02gxbzx.png",
+    title: "BP Monitors",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/aj4m189e6lqbztkpumgc.png",
+    title: "Pulse Oximeter",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/gb4pjl9kvpsh8urarzbs.png",
+    title: "Masks(N95, Surgical and more)",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/wpz8xa7pxihfc8jxmrud.png",
+    title: "Diabetes Monitors",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/wjlqywtlkidzwfdjks42.png",
+    title: "Thermometers",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/bbsuxjqmag9kw0hiaxxo.png",
+    title: "Weighing Scales",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/xs0gkng4tc7zbl1zmxsd.png",
+    title: "Body Massager",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/z7s5ku6a7v3yoob5q3da.png",
+    title: "Vaporizers",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/xdz6yrsfozqciryjxrz0.png",
+    title: "Nebulizer",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/yavhuoq1vtfegm5erkzk.png",
+    title: "Support Braces",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/epejaxqyr9obiqrbcydw.png",
+    title: "Mobility Equipments",
+  },
+];
+
+let HealthAndFoodData = [
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/vuze6xhdat3watvwaro9.png",
+    title: "Green Tea & Hearbs Tea",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/rxqxi3eybpds7l8mymrt.png",
+    title: "Apple Clider Vinegar",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/odov6fsbhdgwfnqnqmyf.jpg",
+    title: "Breaker Creals",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/rstb8fbortn6f868mznd.png",
+    title: "Herbal Juice",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/rabrbljquehqgd6xza9j.png",
+    title: "Nutrional Drinks",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/jvqtphggru8juyrasmj8.png",
+    title: "Dry Fruits",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/tyislu0jse29jkwwegb8.jpg",
+    title: "Honey",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/tyislu0jse29jkwwegb8.jpg",
+    title: "Healthy Snacks",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/vchcj8b7onea3rmfml5z.png",
+    title: "Superfoods",
+  },
+];
 export const Home = () => {
   const [topsSellers, setTopSellers] = useState({
     data: [],
-    height: "210px",
+    height: "368px",
     width: "1280px",
     arrows: true,
+    slidesToShow: 6,
+    slidesToScroll: 6,
+  });
+  const [calciumSupData, setCalciumSupData] = useState({
+    data: [],
+    height: "368px",
+    width: "1280px",
+    arrows: true,
+    slidesToShow: 6,
+    slidesToScroll: 6,
+  });
+
+  const [trendingNowData, setTrendingNowData] = useState({
+    data: [],
+    height: "368px",
+    width: "1280px",
+    arrows: true,
+    slidesToShow: 6,
+    slidesToScroll: 6,
+  });
+
+  const [dealsOfTheDayData, setDealsOfTheDayData] = useState({
+    data: [],
+    height: "368px",
+    width: "1280px",
+    arrows: true,
+    slidesToShow: 6,
+    slidesToScroll: 6,
+  });
+
+  const [newArrivalsDay, setNewArrivalsDay] = useState({
+    data: [],
+    height: "368px",
+    width: "1280px",
+    arrows: true,
+    slidesToShow: 6,
+    slidesToScroll: 6,
   });
 
   //Getting Products Data
   useEffect(() => {
-    let data = getData();
+    let TopSellers = getData(12, 0).then((data) =>
+      setTopSellers({ ...topsSellers, data })
+    );
+
+    let calc = getData(12, 12).then((data) => {
+      setCalciumSupData({ ...calciumSupData, data });
+    });
+
+    let trending = getData(12, 24).then((data) => {
+      setTrendingNowData({ ...calciumSupData, data });
+    });
+
+    let dealsOfTheDay = getData(12, 36).then((data) => {
+      setDealsOfTheDayData({ ...calciumSupData, data });
+    });
+
+    let newArrivals = getData(12, 36).then((data) => {
+      setNewArrivalsDay({ ...calciumSupData, data: data.reverse() });
+    });
+    // console.log(data);
   }, []);
 
-  const getData = async () => {
+  const getData = async (limit, skip) => {
     try {
       let { data } = await axios.get(
-        "https://unit-6projectbackend.herokuapp.com/slider?limit=12&skip=0"
+        `https://unit-6projectbackend.herokuapp.com/slider?limit=${limit}&skip=${skip}`
       );
-      console.log(data);
+      return data.data;
     } catch (e) {
       console.log(e);
     }
@@ -325,6 +537,26 @@ export const Home = () => {
     arrows: true,
   };
 
+  const ShopByHealthConcerns = {
+    data: ShopByHealthData,
+    height: "210px",
+    width: "1280px",
+    arrows: true,
+  };
+
+  const HealthCareDevices = {
+    data: HealthCareDevicesData,
+    height: "210px",
+    width: "1280px",
+    arrows: true,
+  };
+
+  const HealthAndFoods = {
+    data: HealthAndFoodData,
+    height: "210px",
+    width: "1280px",
+    arrows: true,
+  };
   // Type-3 slider
   const FullBodyChekcup = {
     data: FullBodyHealthCheckupData,
@@ -432,6 +664,106 @@ export const Home = () => {
           <BrandsSlider {...PopularCategorise} />
         </div>
       </div>
+      {/* Top sellers */}
+      {/* If height is more , give height to featuredBrands as well  */}
+      <div className="featuredBrands" style={{ height: "415px" }}>
+        {/* Heading of Comp */}
+        <div className="headingOfComponent">
+          <span>Top Sellers </span>
+          <Button styles={seeAllButton} />
+        </div>
+        {/* Slider Container */}
+        <div className="sliderContaier" style={{ height: "368px" }}>
+          <ProductSlider {...topsSellers} />
+        </div>
+      </div>
+      {/* Calcium| Supplement of the week */}
+      <div className="featuredBrands" style={{ height: "415px" }}>
+        {/* Heading of Comp */}
+        <div className="headingOfComponent">
+          <span>Calcium| Supplement of the week</span>
+          <Button styles={seeAllButton} />
+        </div>
+        {/* Slider Container */}
+        <div className="sliderContaier" style={{ height: "368px" }}>
+          <ProductSlider {...calciumSupData} />
+        </div>
+      </div>
+      {/* Shop by Health Concerns */}
+      <div className="featuredBrands">
+        {/* Heading of Comp */}
+        <div className="headingOfComponent">
+          <span>Shop by Health Concerns</span>
+          <Button styles={seeAllButton} />
+        </div>
+        {/* Slider Container */}
+        <div className="sliderContaier">
+          <BrandsSlider {...ShopByHealthConcerns} />
+        </div>
+      </div>
+      {/* Trending Now */}
+      <div className="featuredBrands" style={{ height: "415px" }}>
+        {/* Heading of Comp */}
+        <div className="headingOfComponent">
+          <span>Trendng Now</span>
+          <Button styles={seeAllButton} />
+        </div>
+        {/* Slider Container */}
+        <div className="sliderContaier" style={{ height: "368px" }}>
+          <ProductSlider {...trendingNowData} />
+        </div>
+      </div>
+
+      {/* Deals of the day */}
+      <div className="featuredBrands" style={{ height: "415px" }}>
+        {/* Heading of Comp */}
+        <div className="headingOfComponent">
+          <span>Deals of the day</span>
+          <Button styles={seeAllButton} />
+        </div>
+        {/* Slider Container */}
+        <div className="sliderContaier" style={{ height: "368px" }}>
+          <ProductSlider {...dealsOfTheDayData} />
+        </div>
+      </div>
+      {/*Shop by Health Concerns */}
+      <div className="featuredBrands">
+        {/* Heading of Comp */}
+        <div className="headingOfComponent">
+          <span>Shop by Health Concerns</span>
+          <Button styles={seeAllButton} />
+        </div>
+        {/* Slider Container */}
+        <div className="sliderContaier">
+          <BrandsSlider {...HealthCareDevices} />
+        </div>
+      </div>
+      {/* New Arrivals on TATA 1mg */}
+      <div className="featuredBrands" style={{ height: "415px" }}>
+        {/* New arrivals on TATA 1mg */}
+        <div className="headingOfComponent">
+          <span>New arrivals on TATA 1mg</span>
+          <Button styles={seeAllButton} />
+        </div>
+        {/*New arrivals on TATA 1mg */}
+        <div className="sliderContaier" style={{ height: "368px" }}>
+          <ProductSlider {...newArrivalsDay} />
+        </div>
+      </div>
+      {/* Health and Foods */}
+      <div className="featuredBrands">
+        {/* Heading of Comp */}
+        <div className="headingOfComponent">
+          <span>Shop by Health Concerns</span>
+          <Button styles={seeAllButton} />
+        </div>
+        {/* Slider Container */}
+        <div className="sliderContaier">
+          <BrandsSlider {...HealthAndFoods} />
+        </div>
+      </div>
+      {/* Description */}
+      <Upperfooter />
     </HomeWrapper>
   );
 };
