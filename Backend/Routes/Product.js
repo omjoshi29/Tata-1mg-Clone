@@ -1,7 +1,7 @@
 const {Router}=require("express")
 const Prod=require("../Mongo/productsmongo")
 const Products=Router()
-
+const mongoose=require("mongoose")
 
 //getting all product data
 //http://localhost:8080/alldata
@@ -14,11 +14,12 @@ Products.get("/alldata",async(req,res)=>{
 
 //getting specfic product data by productname
 //`http://localhost:8080/data/${productname}`
-Products.get("/data/:productName",async(req,res)=>{
+Products.get("/data/:id",async(req,res)=>{
 
-    let value=req.params.productName
+    let value=req.params.id
+    const userObjectId = mongoose.Types.ObjectId(value);
     console.log(value)
-    let data=await Prod.findOne({productName:value})
+    let data=await Prod.findOne({_id:userObjectId})
 
     res.send({data:data,message:"request successfull"})
 })
