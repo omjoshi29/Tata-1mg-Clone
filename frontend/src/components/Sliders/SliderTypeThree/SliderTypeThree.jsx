@@ -8,11 +8,12 @@ import Card from "./Card";
 import { useEffect, useRef } from "react";
 const Wrapper = styled.div`
   margin: auto;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   height: ${(props) => (props.height ? props.height : "auto")};
   width: ${(props) => (props.width ? props.width : "auto")};
   /* margin: auto; */
   position: relative;
+
   box-sizing: border-box;
   padding: 0 50px;
   img {
@@ -44,7 +45,8 @@ const Wrapper = styled.div`
   }
   .slick-list {
     box-sizing: initial;
-    padding: 0px 5px;
+    box-sizing: border-box;
+    padding: 2px 5px;
   }
 `;
 

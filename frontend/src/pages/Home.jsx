@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BannerSlider } from "../components/Sliders/BannerSlider/BannerSlider";
 import { BrandsSlider } from "../components/Sliders/BrandsSlider/BrandsSlider";
 import { HomeWrapper } from "./Home.styled";
@@ -7,6 +7,7 @@ import Careplan from "../assets/Images/homepage/careplan.png";
 import Button from "../components/Button";
 // import { BrandsSlider } from "../components/Sliders/BrandsSlider";
 import { SliderTypeThree } from "../components/Sliders/SliderTypeThree/SliderTypeThree";
+import axios from "axios";
 let Banner = [
   {
     imgUrl:
@@ -223,8 +224,79 @@ let MonsoonSellData = [
     title: "OneTouch",
   },
 ];
+
+let PopularCategoriesData = [
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/cabpuknnlyyzgqfnb4x5.png",
+    title: "Vitamins & Supplements",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/x2z8u1osqutmxvx56hlw.png",
+    title: "Ayurveda",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/qjfdkz5njmk9n7vvrbb3.png",
+    title: "Healthcare Devices",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/uq1gwxslqqrxxwv6zi6j.jpg",
+    title: "Nutritional Drinks",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/p1blaka183nc1zlil8tq.png",
+    title: "Sexual Wellness",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/j7ruar88gacbzksuadjn.png",
+    title: "Homeopathy",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/xbppadk1l0w7wferh2uk.png",
+    title: "Diabetes Care",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/bkhusfgfiu9qedowph2i.png",
+    title: "Skin Care",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/htqiurbbhwmrxkvdzwkg.png",
+    title: "Elderly Care",
+  },
+];
 export const Home = () => {
+  const [topsSellers, setTopSellers] = useState({
+    data: [],
+    height: "210px",
+    width: "1280px",
+    arrows: true,
+  });
+
+  //Getting Products Data
+  useEffect(() => {
+    let data = getData();
+  }, []);
+
+  const getData = async () => {
+    try {
+      let { data } = await axios.get(
+        "https://unit-6projectbackend.herokuapp.com/slider?limit=12&skip=0"
+      );
+      console.log(data);
+    } catch (e) {
+      console.log(e);
+    }
+  };
   //Data of banners and sliders
+  // Type 1 Slider
   const data1 = {
     data: Banner,
     height: "250px",
@@ -232,6 +304,7 @@ export const Home = () => {
     arrows: false,
   };
 
+  // Type - 2 Slider
   const brandsProp = {
     data: BrandsData,
     height: "210px",
@@ -245,7 +318,14 @@ export const Home = () => {
     width: "1280px",
     arrows: true,
   };
+  const PopularCategorise = {
+    data: PopularCategoriesData,
+    height: "210px",
+    width: "1280px",
+    arrows: true,
+  };
 
+  // Type-3 slider
   const FullBodyChekcup = {
     data: FullBodyHealthCheckupData,
     height: "154px",
@@ -253,6 +333,14 @@ export const Home = () => {
     cardHeight: "100%",
     cardWidth: "255px",
     cardPadding: "10px",
+    arrows: true,
+  };
+
+  //ProductSlider
+  const TopSellers = {
+    data: PopularCategoriesData,
+    height: "210px",
+    width: "1280px",
     arrows: true,
   };
 
@@ -306,6 +394,20 @@ export const Home = () => {
           <BrandsSlider {...brandsProp} />
         </div>
       </div>
+
+      {/* Full body health Checkup */}
+      <div className="featuredBrands">
+        {/* Heading of Comp */}
+        <div className="headingOfComponent">
+          <span>Full body health checkups</span>
+          <Button styles={seeAllButton} />
+        </div>
+        {/* Slider Container */}
+        <div className="sliderContaier" style={{ height: "184px" }}>
+          {/* <BrandsSlider {...brandsProp} /> */}
+          <SliderTypeThree {...FullBodyChekcup} />
+        </div>
+      </div>
       {/* Monsoon Sell */}
       <div className="featuredBrands">
         {/* Heading of Comp */}
@@ -318,17 +420,16 @@ export const Home = () => {
           <BrandsSlider {...MonsoonProp} />
         </div>
       </div>
-      {/* Full body health Checkup */}
+      {/* Popular Categories Sell */}
       <div className="featuredBrands">
         {/* Heading of Comp */}
         <div className="headingOfComponent">
-          <span>Full body health checkups</span>
+          <span>Popular Categories</span>
           <Button styles={seeAllButton} />
         </div>
         {/* Slider Container */}
-        <div className="sliderContaier" style={{ height: "184px" }}>
-          {/* <BrandsSlider {...brandsProp} /> */}
-          <SliderTypeThree {...FullBodyChekcup} />
+        <div className="sliderContaier">
+          <BrandsSlider {...PopularCategorise} />
         </div>
       </div>
     </HomeWrapper>

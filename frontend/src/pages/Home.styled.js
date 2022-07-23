@@ -94,6 +94,8 @@ export const HomeWrapper = styled.div`
     span {
       font-size: 18px;
       color: #212121;
+      /* border: 1px solid black; */
+      margin-left: 45px;
       line-height: 20px;
     }
   }
