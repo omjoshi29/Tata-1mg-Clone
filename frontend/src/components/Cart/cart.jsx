@@ -3,14 +3,16 @@ import Button from "../Button";
 import styles from "./cart.module.css";
 import axios from "axios";
 import { Total } from "./Total";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 export const Cart = () => {
   const [count, setCount] = useState(1);
   const [cartData,setCartData] = useState([]);
+  const [total,setTotal] = useState(0)
   const state=useSelector((state)=>state);
   const [obj,setObj] = useState({})
   const navigate = useNavigate()
+  const dispatch = useDispatch()
   const button = {
     bg: "#ff6f61",
     text: "CHECKOUT",
@@ -22,18 +24,18 @@ export const Cart = () => {
   };
 useEffect(()=>{
   getcart()
-
+  setObj({...obj})
 },[])
   const getcart = ()=>{
     axios.get(`https://unit-6projectbackend.herokuapp.com/getcart/${state.username}`).then(({data})=>{
         setCartData(data.data[0].cats)
-        console.log(data.data[0].Total,"tottal")
+        console.log(data.data[0].Total,"tottal inital")
     })
   }
   const handleCheckout = ()=>{
        navigate("/address")
   }
- 
+ console.log(cartData)
   return (
     <div className={styles.Main}>
       <div className={styles.leftcart}>
@@ -69,55 +71,17 @@ useEffect(()=>{
               <div className={styles.deletecart}>
                 <img
                   onClick={() =>
-                     {
-                      
-                      if(obj[el._id]<2)
-                      {
-                        return
-                      }
-                      
-                      if(obj[el._id] == undefined){
-                        setObj({...obj,[el._id]:1})
-                        
-                        
-                     }
-                     else {
-                      setObj({...obj,[el._id]:obj[el._id]-1})
-                      axios.post("https://unit-6projectbackend.herokuapp.com/updatequant",{username:state.username,obj})
-                      .then((data)=>{
-                        setCartData(data.data.data[0].cats);
-                        
-
-                      })
-                      setCount(count-1)
-                    
-                    }
+                    setCount(count-1) 
+                    //dispatch(cartqty(el._id, -1))
                   }
-                }
-                  
                   src="https://www.1mg.com/images/minus-cart.svg"
                 />
                 <p>{count}</p>
                 <img
                     onClick={() =>
-                         {                                     
-                          if(obj[el._id] == undefined){
-                            setObj({...obj,[el._id]:2})
-                            setCount(count+1)
-                                
-                            }
-                            else {
-                              setObj({...obj,[el._id]:obj[el._id]+1})
-                              axios.post("https://unit-6projectbackend.herokuapp.com/updatequant",{username:state.username,obj})
-                                .then((data)=>{
-                                  setCartData(data.data.data[0].cats)
-                                })
-                                setCount(count+1)
-                                
-                             }
-                            
-                           }
-                        }
+                        setCount(count+1)
+                        //dispatch(cartqty(el._id, 1))
+                    }
                   src="https://www.1mg.com/images/plus-cart.svg"
                 />
               </div>
