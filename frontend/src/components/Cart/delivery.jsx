@@ -7,18 +7,7 @@ export const Delivery = ()=>{
         <div className={styles.mainchoose}>
              <div className={styles.choose}>
                  <p>Choose delivery option(s)</p>
-                 <div>
-                     <div className={styles.choose1}>
-                         <p>Shipment 1 out of 2</p>
-                         <div className={styles.choose2}>
-                             <img width="40px" src="https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/ym5cke0aftsrelfivdzz.jpg"/>
-                             <div>
-                                 <p>Siddhayu Calciactiv Advanced Natural Calcium Supplement Tablet</p>
-                                 <p>bottle of 60 tablets</p>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
+                
                  <div className={styles.between}>
                      <p>Choose a delivery speed</p>
                      <p className={styles.between1}>

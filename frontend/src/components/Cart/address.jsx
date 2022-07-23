@@ -1,10 +1,14 @@
 import styles from "./cart.module.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Checkbox } from "pretty-checkbox-react";
 import { useNavigate } from "react-router-dom";
-// import '@djthoms/pretty-checkbox';
+import '@djthoms/pretty-checkbox';
+import axios from "axios";
+import { useSelector } from "react-redux";
 export const Address = () => {
   const [form, setForm] = useState({});
+  const [addressData,setAddressData] = useState([])
+  const state=useSelector((state)=>state);
   const [change, setChange] = useState(false);
   const [add, setAdd] = useState(false);
   const navigate = useNavigate()
@@ -16,12 +20,23 @@ export const Address = () => {
     setChange(false);
   };
   const handleSave = () => {
+    axios.post(`https://onemgbackend.herokuapp.com/address/${state.username}`,form,{username:state.username})
     setChange(true);
   };
+  useEffect(()=>{
+    getaddress()
+  },[])
+  const getaddress = ()=>{
+    axios.get(`https://onemgbackend.herokuapp.com/address/${state.username}`).then(({data})=>{
+      setAddressData(data)
+    })
+  }
+  console.log(addressData,"add")
   return (
     <div>
       {change || add ? (
         <div className={styles.addressdata}>
+        
           <div className={styles.addressdata1}>
             <div>
               <img
@@ -31,10 +46,11 @@ export const Address = () => {
               <p>Home</p>
             </div>
             <p>nagesh kumawat</p>
-            <p>1234567890</p>
+            <p>{addressData.mobile}</p>
             <p>Address</p>
             <p>Ratlam Madhya pradesh-457339</p>
           </div>
+          
           <div onClick={handeaddAddress}>+ ADD NEW ADDRESS</div>
           <div onClick={()=>navigate("/delivery")}>CONTINUE</div>
         </div>
@@ -93,9 +109,12 @@ export const Address = () => {
                 placeholder="10 Digit Mobile Number"
                 onChange={handleFormChange}
               />
-              <Checkbox value="Home">Home</Checkbox>
-              <Checkbox value="Office">Office</Checkbox>
-              <Checkbox value="Other">Other</Checkbox>
+              <div className={styles.office}>
+                 <Checkbox value="Home">Home</Checkbox>
+                 <Checkbox value="Office">Office</Checkbox>
+                 <Checkbox value="Other">Other</Checkbox>
+              </div>
+              
             </form>
             <div className={styles.savedata}>
               <p>CANCLE</p>

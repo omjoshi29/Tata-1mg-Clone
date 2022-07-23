@@ -25,7 +25,7 @@ useEffect(()=>{
 
 },[])
   const getcart = ()=>{
-    axios.get(`https://onemgbackend.herokuapp.com/getcart/${state.username}`).then(({data})=>{
+    axios.get(`https://unit-6projectbackend.herokuapp.com/getcart/${state.username}`).then(({data})=>{
         setCartData(data.data[0].cats)
         console.log(data.data[0].Total,"tottal")
     })
@@ -43,7 +43,7 @@ useEffect(()=>{
           <div key={el._id} className={styles.cartdata}>
             <div>
               <h3>{el.productName}</h3>
-              <h3>{el.price}</h3>
+              <h3>{(el.price*count)}</h3>
             </div>
             <div>
               <p>{el.shortDesc}</p>
@@ -51,7 +51,7 @@ useEffect(()=>{
             </div>
             <div>
               <div onClick={()=>
-              axios.post("https://onemgbackend.herokuapp.com/removequant",
+              axios.post("https://unit-6projectbackend.herokuapp.com/removequant",
               {_id:el._id,username:state.username,obj:obj})
               .then((data)=>{
                 setCartData(data.data[0].cats);
@@ -78,16 +78,19 @@ useEffect(()=>{
                       
                       if(obj[el._id] == undefined){
                         setObj({...obj,[el._id]:1})
-                        setCount(count-1)
+                        
+                        
                      }
                      else {
                       setObj({...obj,[el._id]:obj[el._id]-1})
-                      axios.post("https://onemgbackend.herokuapp.com/updatequant",{username:state.username,obj})
+                      axios.post("https://unit-6projectbackend.herokuapp.com/updatequant",{username:state.username,obj})
                       .then((data)=>{
                         setCartData(data.data.data[0].cats);
-                        console.log(data.data[0].Total,"second")
+                        
+
                       })
                       setCount(count-1)
+                    
                     }
                   }
                 }
@@ -100,15 +103,17 @@ useEffect(()=>{
                          {                                     
                           if(obj[el._id] == undefined){
                             setObj({...obj,[el._id]:2})
-                            setCount(count+1)             
+                            setCount(count+1)
+                                
                             }
                             else {
                               setObj({...obj,[el._id]:obj[el._id]+1})
-                              axios.post("https://onemgbackend.herokuapp.com/updatequant",{username:state.username,obj})
+                              axios.post("https://unit-6projectbackend.herokuapp.com/updatequant",{username:state.username,obj})
                                 .then((data)=>{
                                   setCartData(data.data.data[0].cats)
                                 })
-                                setCount(count+1) 
+                                setCount(count+1)
+                                
                              }
                             
                            }
