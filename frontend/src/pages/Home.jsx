@@ -87,7 +87,7 @@ let BrandsData = [
   },
 ];
 
-const Home = () => {
+export const Home = () => {
   const data1 = {
     data: Banner,
     height: "250px",
@@ -98,7 +98,7 @@ const Home = () => {
   const data2 = {
     data: BrandsData,
     height: "210px",
-    width: "1270px",
+    width: "1280px",
     arrows: true,
   };
 

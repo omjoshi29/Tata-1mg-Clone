@@ -9,18 +9,19 @@ import { Delivery } from "./components/Cart/delivery";
 import Offer from "./components/Offer/Offer";
 import { OrderSummary } from "./components/Cart/ordersummary";
 import { Payment } from "./components/payment/payment";
-import{Routes,Route} from "react-router-dom"
-import {Login} from "./components/Signup/Login"
-import{LoadingGmail} from "./components/Signup/LoadingGmail"
-import{PrivateRouter} from "./Routes/PrivateRouter";
+import { Routes, Route } from "react-router-dom";
+import { Login } from "./components/Signup/Login";
+import { LoadingGmail } from "./components/Signup/LoadingGmail";
+import { PrivateRouter } from "./Routes/PrivateRouter";
+import { Home } from "./pages/Home";
 function App() {
   return (
     <div className="App">
-      {/* <Navigation /> */}
+      <Navigation />
       {/* <Offer /> */}
-    
-      </div>
-  )
+      <Home />
+    </div>
+  );
 }
 
 export default App;

@@ -7,9 +7,10 @@ const Wrapper = styled.div`
   border-radius: 5px;
 
   height: 210px;
-  box-sizing: border-box;
+
+  padding: 0px 8px;
+  background-color: white;
   width: 175px;
-  padding: 10px;
 
   &:hover {
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
@@ -20,10 +21,17 @@ const Wrapper = styled.div`
     flex-direction: column;
     align-items: center;
     text-decoration: none;
+    /* border: 1px solid red; */
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 20px;
     color: #212121;
     span {
+      /* height: 120px;
+      width: 120px; */
+      /* border: 1px solid black; */
       img {
-        width: 120px;
+        width: 100px;
       }
       margin-bottom: 10px;
     }

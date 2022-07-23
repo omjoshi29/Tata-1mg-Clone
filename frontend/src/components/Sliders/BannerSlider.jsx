@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   *:focus {
     outline: 0;
   }
+
   margin: auto;
   /* border: 1px solid black; */
 
@@ -59,7 +60,8 @@ export const BannerSlider = ({ data, height, width, arrows }) => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 300,
+    autoplay: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows,
