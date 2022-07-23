@@ -14,12 +14,14 @@ import { Login } from "./components/Signup/Login";
 import { LoadingGmail } from "./components/Signup/LoadingGmail";
 import { PrivateRouter } from "./Routes/PrivateRouter";
 import { Home } from "./pages/Home";
+import { Footer } from "./components/Footer/Footer";
 function App() {
   return (
     <div className="App">
       <Navigation />
       {/* <Offer /> */}
       <Home />
+      <Footer />
     </div>
   );
 }

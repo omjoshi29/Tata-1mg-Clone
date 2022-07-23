@@ -4,20 +4,17 @@ import styled from "styled-components";
 import React, { Component } from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
-import BrandCard from "./BrandCard";
+import Card from "./Card";
 import { useEffect, useRef } from "react";
 const Wrapper = styled.div`
-  /* *:focus {
-    outline: 0;
-  } */
   margin: auto;
-  /* border: 1px solid black; */
+  border: 1px solid black;
   height: ${(props) => (props.height ? props.height : "auto")};
   width: ${(props) => (props.width ? props.width : "auto")};
   /* margin: auto; */
   position: relative;
   box-sizing: border-box;
-  padding: 0 30px;
+  padding: 0 50px;
   img {
     height: 100%;
     width: 100%;
@@ -51,15 +48,23 @@ const Wrapper = styled.div`
   }
 `;
 
-export const BrandsSlider = ({ data, height, width, arrows }) => {
+export const SliderTypeThree = ({
+  data,
+  height,
+  width,
+  arrows,
+  cardHeight,
+  cardWidth,
+  cardPadding,
+}) => {
   const sliderRef = useRef();
 
   const settings = {
     dots: false,
     infinite: false,
     speed: 500,
-    slidesToShow: 6,
-    slidesToScroll: 6,
+    slidesToShow: 4,
+    slidesToScroll: 4,
     focus: false,
     arrows: false,
     // nextArrow: <SampleNextArrow className={"sliderArrowLeft"} />,
@@ -98,7 +103,15 @@ export const BrandsSlider = ({ data, height, width, arrows }) => {
       </div>
       <Slider {...settings} ref={sliderRef}>
         {data.map((el, i) => {
-          return <BrandCard key={i} {...el} />;
+          return (
+            <Card
+              key={i}
+              {...el}
+              cardHeight={cardHeight}
+              cardWidth={cardWidth}
+              cardPadding={cardPadding}
+            />
+          );
         })}
       </Slider>
     </Wrapper>

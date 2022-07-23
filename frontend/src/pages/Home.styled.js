@@ -69,6 +69,9 @@ export const HomeWrapper = styled.div`
     //Slider container
 
     .sliderContaier {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       height: 210px;
       margin-top: 10px;
       /* border: 1px solid black; */

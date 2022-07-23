@@ -6,7 +6,7 @@ import RightBanner from "../assets/Images/HomePageBanner/right.webp";
 import Careplan from "../assets/Images/homepage/careplan.png";
 import Button from "../components/Button";
 // import { BrandsSlider } from "../components/Sliders/BrandsSlider";
-
+import { SliderTypeThree } from "../components/Sliders/SliderTypeThree/SliderTypeThree";
 let Banner = [
   {
     imgUrl:
@@ -93,6 +93,136 @@ let BrandsData = [
   },
 ];
 
+let FullBodyHealthCheckupData = [
+  {
+    title: "Women Wellness Advanced Package",
+    desc: "Includes 44 tests",
+    imgUrl:
+      "https://onemg.gumlet.io/diagnostics/b1f8f81e-5677-11ec-9fd9-0a65f29f7340.png?format=auto",
+    rating: "4.9",
+    price: "₹1499",
+    strikeOfPrice: "₹2998",
+    discount: "50% Off",
+  },
+  {
+    title: "Comprehensive Platinum Full Body Checkup",
+    desc: "Includes 91 tests",
+    imgUrl:
+      "https://onemg.gumlet.io/diagnostics/b1f8f81e-5677-11ec-9fd9-0a65f29f7340.png?format=auto",
+    rating: "4.9",
+    price: "₹3499",
+    strikeOfPrice: "₹6998",
+    discount: "50% Off",
+  },
+  {
+    title: "Monsoon Health Screening",
+    desc: "Includes 54 tests",
+    imgUrl:
+      "https://onemg.gumlet.io/diagnostics/b1f8f81e-5677-11ec-9fd9-0a65f29f7340.png?format=auto",
+    rating: "4.9",
+    price: "₹1299",
+    strikeOfPrice: "₹2598",
+    discount: "50% Off",
+  },
+  {
+    title: "Good Health Silver Package",
+    desc: "Includes 58 tests",
+    imgUrl:
+      "https://onemg.gumlet.io/diagnostics/b1f8f81e-5677-11ec-9fd9-0a65f29f7340.png?format=auto",
+    rating: "4.9",
+    price: "₹649",
+    strikeOfPrice: "₹1298",
+    discount: "50% Off",
+  },
+  {
+    title: "Women Wellness Advanced Package",
+    desc: "Includes 44 tests",
+    imgUrl:
+      "https://onemg.gumlet.io/diagnostics/b1f8f81e-5677-11ec-9fd9-0a65f29f7340.png?format=auto",
+    rating: "4.9",
+    price: "₹1499",
+    strikeOfPrice: "₹2998",
+    discount: "50% Off",
+  },
+  {
+    title: "Comprehensive Platinum Full Body Checkup",
+    desc: "Includes 91 tests",
+    imgUrl:
+      "https://onemg.gumlet.io/diagnostics/b1f8f81e-5677-11ec-9fd9-0a65f29f7340.png?format=auto",
+    rating: "4.9",
+    price: "₹3499",
+    strikeOfPrice: "₹6998",
+    discount: "50% Off",
+  },
+  {
+    title: "Monsoon Health Screening",
+    desc: "Includes 54 tests",
+    imgUrl:
+      "https://onemg.gumlet.io/diagnostics/b1f8f81e-5677-11ec-9fd9-0a65f29f7340.png?format=auto",
+    rating: "4.9",
+    price: "₹1299",
+    strikeOfPrice: "₹2598",
+    discount: "50% Off",
+  },
+  {
+    title: "Good Health Silver Package",
+    desc: "Includes 58 tests",
+    imgUrl:
+      "https://onemg.gumlet.io/diagnostics/b1f8f81e-5677-11ec-9fd9-0a65f29f7340.png?format=auto",
+    rating: "4.9",
+    price: "₹649",
+    strikeOfPrice: "₹1298",
+    discount: "50% Off",
+  },
+];
+
+let MonsoonSellData = [
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/egh2aj4d1wjc5cdpwhri.png",
+    title: "Baidyanath",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/cbpds7xlfxiuhxngnrny.jpg",
+    title: "HealthKart",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/ojflleksz17wnmo99bhd.jpg",
+    title: "Kerala Ayurveda",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/qd6uzql75dcbrxkmzoly.png",
+    title: "Sugar Free",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/aubqz1qp0hvtr5mme3ac.png",
+    title: "Cofsils",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/zl9ucofhexlvnbbqycfu.jpg",
+    title: "Parachute",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/dwxy35ghnxc5bt1wavnq.png",
+    title: "Sebamed",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/erijhlrytyh1wl1tflhu.png",
+    title: "Lacto Calamine",
+  },
+  {
+    imgUrl:
+      "https://onemg.gumlet.io/c_fit,f_auto,h_150,q_auto,a_ignore,w_150/sndv91v2nbfjomzol9qt.png",
+    title: "OneTouch",
+  },
+];
 export const Home = () => {
   //Data of banners and sliders
   const data1 = {
@@ -106,6 +236,23 @@ export const Home = () => {
     data: BrandsData,
     height: "210px",
     width: "1280px",
+    arrows: true,
+  };
+
+  const MonsoonProp = {
+    data: MonsoonSellData,
+    height: "210px",
+    width: "1280px",
+    arrows: true,
+  };
+
+  const FullBodyChekcup = {
+    data: FullBodyHealthCheckupData,
+    height: "154px",
+    width: "1280px",
+    cardHeight: "100%",
+    cardWidth: "255px",
+    cardPadding: "10px",
     arrows: true,
   };
 
@@ -151,12 +298,24 @@ export const Home = () => {
       <div className="featuredBrands">
         {/* Heading of Comp */}
         <div className="headingOfComponent">
-          <span>Featured Brands</span>
+          <span> Featured Brands</span>
           <Button styles={seeAllButton} />
         </div>
         {/* Slider Container */}
         <div className="sliderContaier">
           <BrandsSlider {...brandsProp} />
+        </div>
+      </div>
+      {/* Monsoon Sell */}
+      <div className="featuredBrands">
+        {/* Heading of Comp */}
+        <div className="headingOfComponent">
+          <span>Monsoon Wellness Sale</span>
+          <Button styles={seeAllButton} />
+        </div>
+        {/* Slider Container */}
+        <div className="sliderContaier">
+          <BrandsSlider {...MonsoonProp} />
         </div>
       </div>
       {/* Full body health Checkup */}
@@ -169,6 +328,7 @@ export const Home = () => {
         {/* Slider Container */}
         <div className="sliderContaier" style={{ height: "184px" }}>
           {/* <BrandsSlider {...brandsProp} /> */}
+          <SliderTypeThree {...FullBodyChekcup} />
         </div>
       </div>
     </HomeWrapper>

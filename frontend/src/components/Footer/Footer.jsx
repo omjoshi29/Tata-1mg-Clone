@@ -18,7 +18,7 @@ import { BsChevronDown } from "react-icons/bs";
 import { BsChevronUp } from "react-icons/bs";
 import CardsImg from "../../assets/Icons/cards.png";
 
-const Footer = () => {
+export const Footer = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const sendLinkB1 = {

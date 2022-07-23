@@ -7,9 +7,6 @@ import { Link } from "react-router-dom";
 import BrandCard from "./BrandCard";
 import { useEffect, useRef } from "react";
 const Wrapper = styled.div`
-  /* *:focus {
-    outline: 0;
-  } */
   margin: auto;
   /* border: 1px solid black; */
   height: ${(props) => (props.height ? props.height : "auto")};
