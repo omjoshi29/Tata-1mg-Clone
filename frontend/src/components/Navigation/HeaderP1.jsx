@@ -74,7 +74,7 @@ const HeaderP1 = () => {
               </HiddenHead> 
           </Li>
           <li onMouseEnter ={()=>setdel(false)}>
-            <Link to={"#"} >Offers</Link>
+            <Link to={"/offer"} >Offers</Link>
           </li>
           <li>
             <Link to={"/cart"}>

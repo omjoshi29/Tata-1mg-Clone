@@ -8,6 +8,9 @@ import { Cart } from "../components/Cart/cart"
 import { Delivery } from "../components/Cart/delivery"
 import { OrderSummary } from "../components/Cart/ordersummary"
 import { Payment } from "../components/payment/payment"
+import Offer from "../components/Offer/Offer"
+import About from "../abtcomponents/About"
+import Footer from "../components/Footer/Footer"
 export const MainRoutes = ()=>{
     return (
         <div>
@@ -20,7 +23,10 @@ export const MainRoutes = ()=>{
             <Route path="/delivery" element={<Delivery/>}/>
             <Route path="/summary" element={<OrderSummary/>}/>
             <Route path ="/payment" element={<Payment/>}/>
+            <Route path ="/offer" element={<Offer/>}/>
+            <Route path="/about" element={<About/>}/>
         </Routes>
+        <Footer/>
         </div>
     )
 }
