@@ -11,26 +11,19 @@ const Wrapper = styled.div`
   }
 
   margin: auto;
-  /* border: 1px solid black; */
-
-  /* margin-top: 250px; */
-  /* width: 50%; */
 
   height: ${(props) => (props.height ? props.height : "auto")};
   width: ${(props) => (props.width ? props.width : "auto")};
-  /* margin: auto; */
+
   position: relative;
   img {
-    height: 100%;
-    width: 100%;
+    height: ${(props) => (props.height ? props.height : "auto")};
+    /* border: 1px solid red; */
+    width: ${(props) => (props.width ? props.width : "auto")};
   }
   ul {
     bottom: 12px;
-
     position: absolute;
-  }
-
-  img {
   }
 `;
 

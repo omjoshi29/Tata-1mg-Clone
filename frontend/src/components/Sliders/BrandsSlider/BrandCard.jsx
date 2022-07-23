@@ -8,13 +8,14 @@ const Wrapper = styled.div`
 
   height: 210px;
 
-  padding: 0px 8px;
+  padding: 0px 0px;
   background-color: white;
-  width: 175px;
+  width: 170px;
 
   &:hover {
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-      rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+      rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+      rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
   }
   a {
     display: flex;
@@ -24,7 +25,7 @@ const Wrapper = styled.div`
     /* border: 1px solid red; */
     justify-content: center;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 20px 15px;
     color: #212121;
     span {
       /* height: 120px;

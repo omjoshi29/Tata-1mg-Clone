@@ -34,39 +34,22 @@ const Wrapper = styled.div`
   }
 
   .nextArrow {
-    right: -20px;
+    right: 20px;
+    z-index: 1;
     top: calc(${(props) => (props.height ? props.height : "auto")} / 2);
     transform: translate(0, -50%);
   }
   .prevArrow {
-    left: -20px;
+    z-index: 1;
+    left: 0px;
     top: calc(${(props) => (props.height ? props.height : "auto")} / 2);
     transform: translate(0, -50%);
   }
+  .slick-list {
+    box-sizing: initial;
+    padding: 0px 5px;
+  }
 `;
-
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "red" }}
-      onClick={onClick}
-    />
-  );
-}
-
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  console.log(className);
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "green" }}
-      onClick={onClick}
-    ></div>
-  );
-}
 
 export const BrandsSlider = ({ data, height, width, arrows }) => {
   const sliderRef = useRef();

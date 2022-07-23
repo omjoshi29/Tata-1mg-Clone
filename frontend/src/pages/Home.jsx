@@ -1,6 +1,12 @@
 import React from "react";
-import { BannerSlider } from "../components/Sliders/BannerSlider";
-import { BrandsSlider } from "../components/Sliders/BrandsSlider";
+import { BannerSlider } from "../components/Sliders/BannerSlider/BannerSlider";
+import { BrandsSlider } from "../components/Sliders/BrandsSlider/BrandsSlider";
+import { HomeWrapper } from "./Home.styled";
+import RightBanner from "../assets/Images/HomePageBanner/right.webp";
+import Careplan from "../assets/Images/homepage/careplan.png";
+import Button from "../components/Button";
+// import { BrandsSlider } from "../components/Sliders/BrandsSlider";
+
 let Banner = [
   {
     imgUrl:
@@ -88,27 +94,84 @@ let BrandsData = [
 ];
 
 export const Home = () => {
+  //Data of banners and sliders
   const data1 = {
     data: Banner,
     height: "250px",
-    width: "1270px",
+    width: "100%",
     arrows: false,
   };
 
-  const data2 = {
+  const brandsProp = {
     data: BrandsData,
     height: "210px",
     width: "1280px",
     arrows: true,
   };
 
+  //Button
+  const seeAllButton = {
+    bg: "#ff6f61",
+    text: "SEE ALL",
+    width: "63px",
+    br: "3px",
+    fontWeight: "Bold",
+    color: "#ffffff",
+    height: "27px",
+    fontSize: "12px",
+  };
+
   return (
-    <div>
-      <h1>Banner Slider</h1>
+    <HomeWrapper>
+      {/* <h1>Banner Slider</h1>
       <BannerSlider {...data1} />
       <h2>Brands Slider</h2>
-      <BrandsSlider {...data2} />
-    </div>
+      <BrandsSlider {...data2} /> */}
+
+      {/* Top Courosal with banner */}
+      <div className="topBanner">
+        <div className="bannerSliderContainer">
+          <BannerSlider {...data1} />
+        </div>
+        <div className="rightBanner">
+          <img src={RightBanner} alt="" />
+        </div>
+      </div>
+      {/* Heading  */}
+      <div className="headingOf1mg">
+        <h1>Tata 1mg: India’s Leading Online Pharmacy & Healthcare Platform</h1>
+      </div>
+      {/* Add Care Plan */}
+      <div className="addOfCarePlan">
+        <span>
+          <img src={Careplan} alt="careplan" />
+        </span>
+      </div>
+      {/* Featured Brands */}
+      <div className="featuredBrands">
+        {/* Heading of Comp */}
+        <div className="headingOfComponent">
+          <span>Featured Brands</span>
+          <Button styles={seeAllButton} />
+        </div>
+        {/* Slider Container */}
+        <div className="sliderContaier">
+          <BrandsSlider {...brandsProp} />
+        </div>
+      </div>
+      {/* Full body health Checkup */}
+      <div className="featuredBrands">
+        {/* Heading of Comp */}
+        <div className="headingOfComponent">
+          <span>Full body health checkups</span>
+          <Button styles={seeAllButton} />
+        </div>
+        {/* Slider Container */}
+        <div className="sliderContaier" style={{ height: "184px" }}>
+          {/* <BrandsSlider {...brandsProp} /> */}
+        </div>
+      </div>
+    </HomeWrapper>
   );
 };
 
