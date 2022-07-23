@@ -1,15 +1,16 @@
 import React from "react";
 import styles from "./cart.module.css";
-export const Total = ()=>{
+export const Total = (subTotal)=>{
+    console.log(subTotal.total,"subb")
     return (
         <div className={styles.prdata}>
             <div className={styles.discount}>
                 <p>Item Total(MRP)</p>
-                <p>₹2445</p>
+                <p>₹{subTotal.total}</p>
             </div>
             <div className={styles.discount}>
                 <p>Price Discount</p>
-                <p>-₹700</p>
+                <p>-₹ {(subTotal.total*0.15).toFixed(2)}</p>
             </div>
             <hr />
             <div className={styles.discount}>
@@ -23,11 +24,11 @@ export const Total = ()=>{
             <hr />
             <div className={styles.paid}>
                 <p>To be paid</p>
-                <p>₹1750</p>
+                <p>₹{subTotal.total-subTotal.total*0.15}</p>
             </div>
             <div className={styles.paid1}>
                 <p>To be paid</p>
-                <p>₹700</p>
+                <p>₹{subTotal.total-subTotal.total*0.15}</p>
             </div>
         </div>
     )

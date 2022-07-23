@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 export const Cart = () => {
   const [count, setCount] = useState(1);
   const [cartData,setCartData] = useState([]);
-  const [total,setTotal] = useState(0)
+  const [total,setTotal] = useState([])
   const state=useSelector((state)=>state);
   const [obj,setObj] = useState({})
   const navigate = useNavigate()
@@ -24,7 +24,8 @@ export const Cart = () => {
   };
 useEffect(()=>{
   getcart()
-  setObj({...obj})
+  setObj({...obj});
+  //call()
 },[])
   const getcart = ()=>{
     axios.get(`https://unit-6projectbackend.herokuapp.com/getcart/${state.username}`).then(({data})=>{
@@ -35,7 +36,22 @@ useEffect(()=>{
   const handleCheckout = ()=>{
        navigate("/address")
   }
- console.log(cartData)
+  const handleIncre = (price)=>{
+  
+
+  }
+
+  const handleDecr = (price)=>{
+    setCount(count-1);
+ 
+ }
+// console.log(total)
+
+
+  var subTotal = cartData.reduce(function (acc, elem) {
+    return acc + elem.price * count;
+  }, 0);
+  
   return (
     <div className={styles.Main}>
       <div className={styles.leftcart}>
@@ -70,17 +86,13 @@ useEffect(()=>{
 
               <div className={styles.deletecart}>
                 <img
-                  onClick={() =>
-                    setCount(count-1) 
-                    //dispatch(cartqty(el._id, -1))
-                  }
+                  onClick={() =>handleDecr(el.price)}
                   src="https://www.1mg.com/images/minus-cart.svg"
                 />
                 <p>{count}</p>
                 <img
-                    onClick={() =>
-                        setCount(count+1)
-                        //dispatch(cartqty(el._id, 1))
+                    onClick={() =>   setCount(count+1)
+                    
                     }
                   src="https://www.1mg.com/images/plus-cart.svg"
                 />
@@ -157,7 +169,7 @@ useEffect(()=>{
             <p>Add care plan to cart</p>
           </div>
         </div>
-        <div><Total/></div>
+        <div><Total total={subTotal}/></div>
         <div className={styles.deliverylocation}>
           <div className={styles.location}>
             <p>Your delivery location</p>
