@@ -18,11 +18,11 @@ function App() {
     <div className="App">
       {/* <Navigation /> */}
       {/* <Offer /> */}
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<PrivateRouter><Navigation/></PrivateRouter>}/>
          <Route path="/login" element={<Login/>}></Route>
          <Route path="/loading/:id" element={<LoadingGmail/>}></Route>
-      </Routes>
+      </Routes> */}
       </div>
   )
 }

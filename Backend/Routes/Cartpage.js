@@ -34,8 +34,10 @@ Cartdata.post("/postcart",async(req,res)=>{
 //ObjectId("62d8f8e15d76776ce66ef2c0")
 
 Cartdata.get("/getcart/:username",async(req,res)=>{
+    
     const {username}=req.params
 
+    
     let data=await Cart.aggregate([{$match:{username:username}},{$lookup:{from:"prodmgs",localField:"product_id",foreignField:"_id",as:"cats"}}])
 
     console.log(data)
@@ -73,6 +75,8 @@ Cartdata.post("/updatequant",async(req,res)=>{
     //         total=total+ele.price
     //     }
     // })
+
+
     data[0].cats.map((ele)=>{
         if(obj[ele._id])
         {
