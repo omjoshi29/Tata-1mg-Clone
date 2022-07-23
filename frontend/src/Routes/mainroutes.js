@@ -26,7 +26,7 @@ export const MainRoutes = ()=>{
             <Route path ="/offer" element={<Offer/>}/>
             <Route path="/about" element={<About/>}/>
         </Routes>
-        <Footer/>
+        {/* <Footer/> */}
         </div>
     )
 }

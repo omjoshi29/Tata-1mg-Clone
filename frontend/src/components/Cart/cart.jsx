@@ -33,24 +33,16 @@ useEffect(()=>{
         console.log(data.data[0].Total,"tottal inital")
     })
   }
-  const handleCheckout = ()=>{
-       navigate("/address")
-  }
-  const handleIncre = (price)=>{
-  
-
-  }
-
-  const handleDecr = (price)=>{
-    setCount(count-1);
- 
- }
-// console.log(total)
 
 
   var subTotal = cartData.reduce(function (acc, elem) {
     return acc + elem.price * count;
   }, 0);
+  const handleCheckout = ()=>{
+    navigate("/address");
+    localStorage.setItem("subtotal",JSON.stringify(subTotal))
+    
+}
   
   return (
     <div className={styles.Main}>
@@ -86,12 +78,13 @@ useEffect(()=>{
 
               <div className={styles.deletecart}>
                 <img
-                  onClick={() =>handleDecr(el.price)}
+                  onClick={() =>setCount(count-1)}
                   src="https://www.1mg.com/images/minus-cart.svg"
                 />
                 <p>{count}</p>
                 <img
                     onClick={() =>   setCount(count+1)
+                     
                     
                     }
                   src="https://www.1mg.com/images/plus-cart.svg"

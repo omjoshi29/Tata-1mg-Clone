@@ -20,7 +20,7 @@ export const Address = () => {
     setChange(false);
   };
   const handleSave = () => {
-    axios.post(`https://onemgbackend.herokuapp.com/address/${state.username}`,form,{username:state.username})
+    axios.post(`https://onemgbackend.herokuapp.com/address/${state.username}`,form)
     setChange(true);
   };
   useEffect(()=>{
@@ -68,7 +68,7 @@ export const Address = () => {
               <br />
               <input
                 type="text"
-                name="landmark"
+                //name="landmark"
                 placeholder="Landmark(optional)"
                 onChange={handleFormChange}
               />
@@ -98,7 +98,7 @@ export const Address = () => {
               <br />
               <input
                 type="text"
-                name="customername"
+                name="username"
                 placeholder="Customer Name"
                 onChange={handleFormChange}
               />
