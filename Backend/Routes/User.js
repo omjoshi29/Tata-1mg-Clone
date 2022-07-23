@@ -7,6 +7,7 @@ const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require('twilio')(accountSid, authToken);
 const mongoose=require("mongoose")
+const jwt=require("jsonwebtoken")
 
 require("dotenv").config()
 
@@ -98,6 +99,41 @@ Auth.get("/gmailtoken/:id",async(req,res)=>{
 
   console.log(data,"third")
   res.send({data:data,message:"verfied successfully"})
+})
+
+
+Auth.post("/verifytoken",async(req,res)=>{
+  const {token,refreshToken,username}=req.body;
+
+  try {
+    let decoded = jwt.verify(token,'SUPER123');
+    if(decoded)
+    {
+      res.send({token:token,refreshToken:refreshToken,message:"verfication successfull"})
+    }
+   
+  } catch(err) {
+    try{
+
+      let decoded=jwt.verify(refreshToken,'SUPER123')
+      if(decoded)
+      {
+        let token=jwt.sign({username:username},"SUPER123",{
+          expiresIn:"2h"
+        })
+      let refreshToken=jwt.sign({username:username},"SUPER123",{
+          expiresIn:"5h"
+        })
+  
+        res.send({token:token,refreshToken:refreshToken,message:"update needed"})
+      }
+
+    }
+    catch(err){
+      console.log(err)
+      res.send({token:"",refreshToken:"",message:"login required"})
+    }
+  }
 })
 
 

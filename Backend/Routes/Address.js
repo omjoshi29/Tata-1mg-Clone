@@ -28,7 +28,7 @@ Addressdata.post("/address/:username",async(req,res)=>{
 Addressdata.get("/address/:username",async(req,res)=>{
     const{username}=req.params
     let data=await Address.findOne({username})
-
+    console.log(data,"his is address")
     res.send({data:data,message:"addressdata"})
 })
 
