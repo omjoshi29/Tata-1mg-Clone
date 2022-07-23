@@ -493,6 +493,10 @@
 .proceed{
     margin: 40px 0px;
  }
+ .office {
+     display: flex;
+ }
+ 
 
 
 

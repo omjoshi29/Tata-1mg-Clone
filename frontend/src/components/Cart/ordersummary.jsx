@@ -1,8 +1,15 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import styles from "./cart.module.css"
 import Button from "../Button";
 import { Total } from "./Total";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 export const OrderSummary = ()=>{
+    const navigate = useNavigate()
+    const [cartData,setCartData] = useState([]);
+    const state=useSelector((state)=>state);
     const button = {
         bg: "#ff6f61",
         text: "PROCEED TO PAYMENT",
@@ -12,31 +19,47 @@ export const OrderSummary = ()=>{
         height: "50px",
         fontSize: "18px",
       };
+      useEffect(()=>{
+        getcart()
+      
+      },[])
+        const getcart = ()=>{
+          axios.get(`https://unit-6projectbackend.herokuapp.com/getcart/${state.username}`).then(({data})=>{
+              setCartData(data.data[0].cats)
+              console.log(data.data[0].Total,"tottal")
+          })
+        }
+        console.log(cartData)
     return (
         <div className={styles.summarymain}>
              <div className={styles.summary}>
                  <p>Order Summary</p>
                  <p>Your Items</p>
+                 {cartData.map((ele)=>(
                  <div>
                        <div className={styles.summary1}>
                           Arriving by Wed, 27 Jul info
                        </div>
                        <div className={styles.summary2}>
+
                          <div className={styles.choose2}>
-                             <img width="40px" src="https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/ym5cke0aftsrelfivdzz.jpg"/>
+                             <img height="45px" width="40px" src={ele.imageUrl}/>
                              <div>
-                                 <p>Siddhayu Calciactiv Advanced Natural Calcium Supplement Tablet</p>
-                                 <p>bottle of 60 tablets</p>
+                                 <p>{ele.productName}</p>
+                                 <p>{ele.shortDesc}</p>
                              </div>
                           </div>
                           <div>
-                              <p>₹275</p>
-                              <s>MRP ₹345</s>
+                              <p>{ele.price}</p>
+                              <s>MRP{ele.strikedPrice}</s>
                               <p>NeuCoins earned: 6</p>
                           </div>
                        </div>
+                     
                  </div>
+                  ))} 
              </div>
+            
              <div className={styles.rightsummary}>
                  <p>Select Address</p>
                  <div className={styles.choosedata}>
@@ -67,7 +90,7 @@ export const OrderSummary = ()=>{
                         </div>
                  </div>
                    <Total/>
-                    <div className={styles.proceed}>
+                    <div onClick={()=>navigate("/payment")} className={styles.proceed}>
                             <Button styles={button}/>
                     </div>
                </div>

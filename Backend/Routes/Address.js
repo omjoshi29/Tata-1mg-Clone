@@ -8,13 +8,13 @@ const Address=require("../Mongo/Address")
 
 
 Addressdata.post("/address/:username",async(req,res)=>{
-    const{address1,address2,city,pincode}=req.body
+    const{address,city,pincode}=req.body
     const{username}=req.params
 
     let data=new Address({
         username:username,
         address,
-        mobilenumber,
+        mobile,
         city,
         pincode,
         locality

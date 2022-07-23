@@ -1,9 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../Button";
 import styles from "./cart.module.css";
+import axios from "axios";
 import { Total } from "./Total";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 export const Cart = () => {
   const [count, setCount] = useState(1);
+  const [cartData,setCartData] = useState([]);
+  const [total,setTotal] = useState([])
+  const state=useSelector((state)=>state);
+  const [obj,setObj] = useState({})
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
   const button = {
     bg: "#ff6f61",
     text: "CHECKOUT",
@@ -13,23 +22,61 @@ export const Cart = () => {
     height: "50px",
     fontSize: "18px",
   };
-  let price = 200 * count;
+useEffect(()=>{
+  getcart()
+  setObj({...obj});
+  //call()
+},[])
+  const getcart = ()=>{
+    axios.get(`https://unit-6projectbackend.herokuapp.com/getcart/${state.username}`).then(({data})=>{
+        setCartData(data.data[0].cats)
+        console.log(data.data[0].Total,"tottal inital")
+    })
+  }
+  const handleCheckout = ()=>{
+       navigate("/address")
+  }
+  const handleIncre = (price)=>{
+  
+
+  }
+
+  const handleDecr = (price)=>{
+    setCount(count-1);
+ 
+ }
+// console.log(total)
+
+
+  var subTotal = cartData.reduce(function (acc, elem) {
+    return acc + elem.price * count;
+  }, 0);
+  
   return (
     <div className={styles.Main}>
       <div className={styles.leftcart}>
         <div>
           <p>Items NOT Requiring Prescription (1)</p>
-          <div className={styles.cartdata}>
+          {cartData.map((el)=>(
+          <div key={el._id} className={styles.cartdata}>
             <div>
-              <h3>HealthKart HK Vitals Biotin Tablet</h3>
-              <h3>{price}</h3>
+              <h3>{el.productName}</h3>
+              <h3>{(el.price*count)}</h3>
             </div>
             <div>
-              <p>bottle of 90 tablets</p>
-              <s>MRP₹699</s>
+              <p>{el.shortDesc}</p>
+              <s>MRP{el.strikedPrice}</s>
             </div>
             <div>
-              <div className={styles.deleteCart}>
+              <div onClick={()=>
+              axios.post("https://unit-6projectbackend.herokuapp.com/removequant",
+              {_id:el._id,username:state.username,obj:obj})
+              .then((data)=>{
+                setCartData(data.data[0].cats);
+              })
+              } 
+              
+              className={styles.deleteCart}>
                 <img
                   width={"20px"}
                   src="https://cdn-icons-png.flaticon.com/512/1214/1214428.png"
@@ -39,18 +86,22 @@ export const Cart = () => {
 
               <div className={styles.deletecart}>
                 <img
-                  onClick={() => setCount(count - 1)}
+                  onClick={() =>handleDecr(el.price)}
                   src="https://www.1mg.com/images/minus-cart.svg"
                 />
                 <p>{count}</p>
                 <img
-                  onClick={() => setCount(count + 1)}
+                    onClick={() =>   setCount(count+1)
+                    
+                    }
                   src="https://www.1mg.com/images/plus-cart.svg"
                 />
               </div>
             </div>
           </div>
+           ))}
         </div>
+       
       </div>
       <div className={styles.rightcart}>
         <div className={styles.careplan}>
@@ -118,14 +169,14 @@ export const Cart = () => {
             <p>Add care plan to cart</p>
           </div>
         </div>
-        <div><Total/></div>
+        <div><Total total={subTotal}/></div>
         <div className={styles.deliverylocation}>
           <div className={styles.location}>
             <p>Your delivery location</p>
             <p>Ratlam</p>
           </div>
           <div className={styles.location1}>
-              <Button styles={button}/>
+              <Button styles={button} onClick={handleCheckout}/>
           </div>
         </div>
       </div>
