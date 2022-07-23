@@ -1,13 +1,15 @@
 import React from 'react'
 import Button from "../Button"
 import{LoginButton} from "./Login1"
-import { useNavigate } from 'react-router-dom'
+import { useNavigate,useLocation } from 'react-router-dom'
 import axios from 'axios'
 import{userotp} from "../../Redux/action"
 import { useSelector,useDispatch } from 'react-redux'
 import Cookies from 'js-cookie'
 export const LoginOTP = () => {
- 
+
+    const location=useLocation()
+    console.log(location,"location")
     const[otp,setopt]=React.useState()
     const ref1=React.useRef()
     const state=useSelector((state)=>state)
@@ -44,6 +46,7 @@ export const LoginOTP = () => {
                 });
                 // console.log(Cookies.get("token"))
                 // console.log(Cookies.get("refreshToken"))
+                console.log(location.state,"check nooo")
                 navigate("/",{replace:true})
             })
         }
