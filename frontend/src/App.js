@@ -13,11 +13,11 @@ import{Routes,Route} from "react-router-dom"
 import {Login} from "./components/Signup/Login"
 import{LoadingGmail} from "./components/Signup/LoadingGmail"
 import{PrivateRouter} from "./Routes/PrivateRouter";
+import { MainRoutes } from "./Routes/mainroutes";
 function App() {
   return (
     <div className="App">
-      {/* <Navigation /> */}
-      {/* <Offer /> */}
+      <MainRoutes/>
     
       </div>
   )

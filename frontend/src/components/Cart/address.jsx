@@ -1,11 +1,13 @@
 import styles from "./cart.module.css";
 import React, { useState } from "react";
 import { Checkbox } from "pretty-checkbox-react";
+import { useNavigate } from "react-router-dom";
 // import '@djthoms/pretty-checkbox';
 export const Address = () => {
   const [form, setForm] = useState({});
   const [change, setChange] = useState(false);
   const [add, setAdd] = useState(false);
+  const navigate = useNavigate()
   const handleFormChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
@@ -34,7 +36,7 @@ export const Address = () => {
             <p>Ratlam Madhya pradesh-457339</p>
           </div>
           <div onClick={handeaddAddress}>+ ADD NEW ADDRESS</div>
-          <div>CONTINUE</div>
+          <div onClick={()=>navigate("/delivery")}>CONTINUE</div>
         </div>
       ) : (
         <div className={styles.address}>

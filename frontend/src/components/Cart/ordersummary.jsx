@@ -2,7 +2,10 @@ import React from "react"
 import styles from "./cart.module.css"
 import Button from "../Button";
 import { Total } from "./Total";
+import { useNavigate } from "react-router-dom";
+
 export const OrderSummary = ()=>{
+    const navigate = useNavigate()
     const button = {
         bg: "#ff6f61",
         text: "PROCEED TO PAYMENT",
@@ -67,7 +70,7 @@ export const OrderSummary = ()=>{
                         </div>
                  </div>
                    <Total/>
-                    <div className={styles.proceed}>
+                    <div onClick={()=>navigate("/payment")} className={styles.proceed}>
                             <Button styles={button}/>
                     </div>
                </div>

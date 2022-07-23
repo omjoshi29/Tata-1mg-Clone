@@ -1,7 +1,8 @@
 import React from "react"
+import { useNavigate } from "react-router-dom"
 import styles from "./cart.module.css"
 export const Delivery = ()=>{
-    
+    const navigate= useNavigate()
     return (
         <div className={styles.mainchoose}>
              <div className={styles.choose}>
@@ -40,7 +41,7 @@ export const Delivery = ()=>{
                      <p>Ratlam Madhya pradesh-457339</p>
                  </div>
                
-                <div>
+                <div onClick={()=>navigate("/summary")}>
                     CONTINUE
                 </div>
              

@@ -77,7 +77,7 @@ const HeaderP1 = () => {
             <Link to={"#"} >Offers</Link>
           </li>
           <li>
-            <Link to={"#"}>
+            <Link to={"/cart"}>
               <img width={"24px"} src={CartICon} alt="" />
             </Link>
           </li>
