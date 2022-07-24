@@ -90,63 +90,8 @@ export const Payment =()=>{
                 </div>
             </div>
         </div>
-        <div onClick={handleupi}>
-          <img src={Upi} alt="" />
-          <p>UPI</p>
-        </div>
-        <div>
-          <img src={Cards} alt="" />
-          <p>CARDS</p>
-        </div>
-        <div onClick={handlebanking}>
-          <img src={Netbanking} alt="" />
-          <p>NET BANKING</p>
-        </div>
-        <div onClick={handlepay}>
-          <img src={PayOn} alt="" />
-          <p>PAY ON DELIVERY</p>
-        </div>
-      
-      <div className={styles.payment1}>
-        {upi ? (
-          <div>
-            <Upipage />
-          </div>
-        ) : netbank ? (
-          <div>
-            <NetBanking />
-          </div>
-        ) : payDelivery ? (
-          <div>
-            <PayOnDelivery />
-          </div>
-        ) : (
-          <div>
-            <Wallet />
-          </div>
-        )}
+  
       </div>
-      <div className={styles.rightpayment}>
-        <div>
-          <p>
-            Get 10% off (up to ₹200) on medicines and health products with HDFC
-            bank credit cards.
-          </p>
-          <p>SHOW ALL PAYMENT OFFERS</p>
-        </div>
-        <Total />
-        <div>
-          <Button
-            onClick={() => {
-              navigate("/");
-              localStorage.removeItem("subtotal");
-            }}
-            styles={button}
-          />
-        </div>
-      </div>
-    
-    </div>
         
        
     
