@@ -3,7 +3,7 @@ import descstyles from "./ProductDescription.module.css";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { fetchdes, AddToCart } from "./redux/action";
+import { fetchdes, AddToCart } from "../../Redux/action";
 import "./loader.css";
 
 const ProductDescription = () => {
