@@ -7,7 +7,7 @@ const AddressSchema=mongoose.Schema({
     address:String,
     city:String,
     pincode:Number,
-    mobile:Number,
+    mobilenumber:Number,
     locality:String
 })
 

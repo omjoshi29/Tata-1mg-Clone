@@ -29,6 +29,11 @@ app.use("/",Cartdata)
 app.use("/",Addressdata)
 
 app.get("/",(req,res)=>{
+
+    await Prod.insertMany({
+
+          
+    })
     res.send("welcome to 1mg website")
 })
 
