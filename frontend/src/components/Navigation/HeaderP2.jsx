@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ImLocation } from "react-icons/im";
 import { IoMdLocate } from "react-icons/io";
 import { BiSearch } from "react-icons/bi";
 import Button from "../Button";
 import FireIcon from "../../assets/Icons/lightningIcon.svg";
+
 const HeaderP2 = () => {
-  const [location, setLocation] = useState("New Delhi");
+  const [location, setLocation] = useState("");
+  console.log(location);
   const styles = {
     bg: "#ff6f61",
     text: "Quick Order",
@@ -17,15 +19,25 @@ const HeaderP2 = () => {
     fontSize: "16px",
   };
   let city;
-  const getL = () => {
-    navigator.geolocation.getCurrentPosition(showLocation);
-  };
+  // const getL = () => {
+  //   navigator.geolocation.getCurrentPosition(showLocation);
+  // };
 
-  const showLocation = async (pos) => {
-    let { lattitude, longitude } = pos.coords;
-    console.log(pos);
-    showDataByGeoLocation(pos.coords.latitude, pos.coords.longitude);
-  };
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(function(data) {
+      // console.log(data.coords);
+      let lat = data.coords.latitude;
+      let long = data.coords.longitude;
+
+      showDataByGeoLocation(lat, long);
+    });
+  }, []);
+
+  // const showLocation = async (pos) => {
+  //   let { lattitude, longitude } = pos.coords;
+  //   console.log(pos);
+  //   showDataByGeoLocation(pos.coords.latitude, pos.coords.longitude);
+  // };
 
   const showDataByGeoLocation = async (lattitude, longitude) => {
     let url1 = `https://api.openweathermap.org/data/2.5/onecall?lat=${lattitude}&lon=${longitude}&exclude={part}&appid=85f990cdfc2094625437070b3f3b2977&units=metric`;
@@ -36,8 +48,9 @@ const HeaderP2 = () => {
       `https://us1.locationiq.com/v1/reverse.php?key=pk.456518217705258731c8c7089e3a45d0&lat=${lattitude}&lon=${longitude}&format=json`
     );
     let loc = await res.json();
-
-    city = loc.address.city;
+    let pin = loc.address.city;
+    if (pin) setLocation(city);
+    // console.log(loc);
 
     let dayArray = data1.daily;
   };
@@ -53,7 +66,7 @@ const HeaderP2 = () => {
             <input
               type="text"
               className="location"
-              value={location}
+              value={location || "New Delhi"}
               onChange={(e) => setLocation(e.target.value)}
             />
             <span style={{ cursor: "pointer" }}>

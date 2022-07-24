@@ -4,29 +4,26 @@ import styled from "styled-components";
 import React, { Component } from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
-import BrandCard from "./BrandCard";
+
 const Wrapper = styled.div`
   *:focus {
     outline: 0;
   }
+
   margin: auto;
-  border: 1px solid black;
+
   height: ${(props) => (props.height ? props.height : "auto")};
   width: ${(props) => (props.width ? props.width : "auto")};
-  /* margin: auto; */
 
+  position: relative;
   img {
-    height: 100%;
-    width: 100%;
+    height: ${(props) => (props.height ? props.height : "auto")};
+    /* border: 1px solid red; */
+    width: ${(props) => (props.width ? props.width : "auto")};
   }
-
-  /* the slides */
-  .slick-slide {
-    margin: 0 -10px;
-  }
-  /* the parent */
-  .slick-list {
-    margin: 0 10px;
+  ul {
+    bottom: 12px;
+    position: absolute;
   }
 `;
 
@@ -52,23 +49,30 @@ function SamplePrevArrow(props) {
   );
 }
 
-export const BrandsSlider = ({ data, height, width, arrows }) => {
+export const BannerSlider = ({ data, height, width, arrows }) => {
   const settings = {
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 6,
-    slidesToScroll: 6,
+    dots: true,
+    infinite: true,
+    speed: 300,
+    autoplay: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     arrows,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    //    nextArrow: <SampleNextArrow />,
+    //   prevArrow: <SamplePrevArrow />,
   };
 
   return (
     <Wrapper height={height} width={width}>
       <Slider {...settings}>
-        {data.map((el) => {
-          return <BrandCard {...el} />;
+        {data.map((el, i) => {
+          return (
+            <div key={i}>
+              <Link to={el.link}>
+                <img src={el.imgUrl} alt="" />
+              </Link>
+            </div>
+          );
         })}
       </Slider>
     </Wrapper>

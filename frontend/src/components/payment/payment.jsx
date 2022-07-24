@@ -11,12 +11,15 @@ import { NetBanking } from "./netBanking";
 import { PayOnDelivery } from "./payondelivery";
 import { Total } from "../Cart/Total";
 import Button from "../Button"
+import { useNavigate } from "react-router-dom";
+
 
 export const Payment =()=>{
     //const [wellet,setWellet] = useState(false);
     const [upi,setUpi] = useState(false);
     const [netbank,setNetbank] = useState(false);
     const [payDelivery,setPayDelivery] = useState(false);
+    const navigate = useNavigate()
     const button = {
         bg: "#ff6f61",
         text: "PLACE ORDER",
@@ -80,6 +83,7 @@ export const Payment =()=>{
                 <Total/>
                 <div>
                   <Button onClick={()=>
+                   navigate("/"),
                   localStorage.removeItem('subtotal')
                 } styles={button}/>
                 </div>

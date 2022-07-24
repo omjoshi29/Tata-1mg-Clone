@@ -1,6 +1,6 @@
 import React from "react";
 import OneMgLogo from "../../assets/Icons/logo.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import CartICon from "../../assets/Icons/cart.svg";
 import { useSelector,useDispatch } from "react-redux";
@@ -13,12 +13,13 @@ const HeaderP1 = () => {
   console.log(state.otp=="","true or not")
   const[del,setdel]=React.useState(false)
   console.log(state,"in navigation part")
+  const navigate = useNavigate()
   console.log()
   return (
     <div className="header_1Con" >
       <div className="firstPart">
         <div className="logoCon" onMouseEnter ={()=>setdel(false)}>
-          <img src={OneMgLogo} alt="" />
+          <img onClick={()=>navigate("/")} src={OneMgLogo} alt="" />
         </div>
         <ul className="tabList" >
           <li>

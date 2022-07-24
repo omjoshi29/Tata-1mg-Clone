@@ -6,7 +6,7 @@ const HeaderP3 = () => {
     <div className="header_3Con">
       <ul className="list">
         <li>
-          <Link className="link" to={"#"}>
+          <Link className="link" to={"/products"}>
             Vitamins & Nutrition
           </Link>
           <span>
@@ -17,54 +17,54 @@ const HeaderP3 = () => {
             <div className="subDiv">
               <ul>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Vitamins & Supplements</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Muttivitamins</Link>
+                  <Link to={"/products"}>Muttivitamins</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Vitamins A-Z</Link>
+                  <Link to={"/products"}>Vitamins A-Z</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Mineral Supplements</Link>
+                  <Link to={"/products"}>Mineral Supplements</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Vitamin B12 & B Complex</Link>
+                  <Link to={"/products"}>Vitamin B12 & B Complex</Link>
                 </li>
               </ul>
               <ul>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Nutritional Drinks</strong>
                   </Link>{" "}
                 </li>
                 <li>
-                  <Link to={"#"}>Adult Daily Nutrition</Link>
+                  <Link to={"/products"}>Adult Daily Nutrition</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Kids Nutrition (2-15 Yrs)</Link>
+                  <Link to={"/products"}>Kids Nutrition (2-15 Yrs)</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>For Women</Link>
+                  <Link to={"/products"}>For Women</Link>
                 </li>
               </ul>
 
               <ul>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Health Food & Drinks</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Green Tea & Herbal Tea</Link>
+                  <Link to={"/products"}>Green Tea & Herbal Tea</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Apple Cider Vinegar</Link>
+                  <Link to={"/products"}>Apple Cider Vinegar</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Healthy Snacks</Link>
+                  <Link to={"/products"}>Healthy Snacks</Link>
                 </li>
               </ul>
             </div>
@@ -72,57 +72,57 @@ const HeaderP3 = () => {
             <div className="subDiv">
               <ul>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Protein Supplements</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Whey Protein</Link>
+                  <Link to={"/products"}>Whey Protein</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Amino Acids</Link>
+                  <Link to={"/products"}>Amino Acids</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Mass Gainers</Link>
+                  <Link to={"/products"}>Mass Gainers</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Workout Essential</Link>
+                  <Link to={"/products"}>Workout Essential</Link>
                 </li>
               </ul>
               <ul>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Omega & Fish Oi</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Adult Daily Nutrition</Link>
+                  <Link to={"/products"}>Adult Daily Nutrition</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Kids Nutrition (2-15 Yrs)</Link>
+                  <Link to={"/products"}>Kids Nutrition (2-15 Yrs)</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>For Women</Link>
+                  <Link to={"/products"}>For Women</Link>
                 </li>
               </ul>
 
               <ul>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Immunity Boosters</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Chyawanprasha</Link>
+                  <Link to={"/products"}>Chyawanprasha</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Vitamin C</Link>
+                  <Link to={"/products"}>Vitamin C</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Antioxidant Supplements</Link>
+                  <Link to={"/products"}>Antioxidant Supplements</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Ayurvedic Supplements</Link>
+                  <Link to={"/products"}>Ayurvedic Supplements</Link>
                 </li>
               </ul>
             </div>
@@ -130,48 +130,48 @@ const HeaderP3 = () => {
             <div className="subDiv">
               <ul>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Specialty Supplements</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Pre and Probiotics</Link>
+                  <Link to={"/products"}>Pre and Probiotics</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Glucosamine</Link>
+                  <Link to={"/products"}>Glucosamine</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Collagen</Link>
+                  <Link to={"/products"}>Collagen</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Antioxidants</Link>
+                  <Link to={"/products"}>Antioxidants</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Biotin</Link>
+                  <Link to={"/products"}>Biotin</Link>
                 </li>
               </ul>
 
               <ul>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Weight Management</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Weight Management Herbs</Link>
+                  <Link to={"/products"}>Weight Management Herbs</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Meal Replacements</Link>
+                  <Link to={"/products"}>Meal Replacements</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Weight Gain</Link>
+                  <Link to={"/products"}>Weight Gain</Link>
                 </li>
               </ul>
             </div>
           </div>
         </li>
         <li>
-          <Link className="link" to={"#"}>
+          <Link className="link" to={"/products"}>
             Diabetes
           </Link>
           <span>
@@ -182,35 +182,35 @@ const HeaderP3 = () => {
             <div className="subDiv">
               <ul>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Devices</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Blood Glucose Monitors</Link>
+                  <Link to={"/products"}>Blood Glucose Monitors</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Test Strips & Lancets</Link>
+                  <Link to={"/products"}>Test Strips & Lancets</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Syringes & Pens</Link>
+                  <Link to={"/products"}>Syringes & Pens</Link>
                 </li>
               </ul>
 
               <ul>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Diabetic Medicines</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Vitamins, Minerals & Antioxidants</Link>
+                  <Link to={"/products"}>Vitamins, Minerals & Antioxidants</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Homeopathy Medicines</Link>
+                  <Link to={"/products"}>Homeopathy Medicines</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Ayurvedic Medicines</Link>
+                  <Link to={"/products"}>Ayurvedic Medicines</Link>
                 </li>
               </ul>
             </div>
@@ -218,27 +218,27 @@ const HeaderP3 = () => {
             <div className="subDiv">
               <ul>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Sugar Substitutes</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     {" "}
                     <strong>Diabetic Diet</strong>{" "}
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Amino Acids</Link>
+                  <Link to={"/products"}>Amino Acids</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Juices & Vinegars</Link>
+                  <Link to={"/products"}>Juices & Vinegars</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Superfoods</Link>
+                  <Link to={"/products"}>Superfoods</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Diabetic Foot Health</strong>
                   </Link>
                 </li>
@@ -247,7 +247,7 @@ const HeaderP3 = () => {
           </div>
         </li>
         <li>
-          <Link className="link" to={"#"}>
+          <Link className="link" to={"/products"}>
             Healthcare Devices
           </Link>
           <span>
@@ -260,57 +260,57 @@ const HeaderP3 = () => {
             <div className="subDiv">
               <ul style={{ width: "210px" }}>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Top brands in Healthcare Devices</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>omron</Link>
+                  <Link to={"/products"}>omron</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Accu-chek</Link>
+                  <Link to={"/products"}>Accu-chek</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Dr. Morepen Devices</Link>
+                  <Link to={"/products"}>Dr. Morepen Devices</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Dr Trust</Link>
+                  <Link to={"/products"}>Dr Trust</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>OneTouch</Link>
+                  <Link to={"/products"}>OneTouch</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Contour</Link>
+                  <Link to={"/products"}>Contour</Link>
                 </li>
               </ul>
               <ul>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Masks (N95, Surgical and more)</strong>
                   </Link>{" "}
                 </li>
                 <li>
-                  <Link to={"#"}>Face Shield</Link>
+                  <Link to={"/products"}>Face Shield</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Surgical Masks</Link>
+                  <Link to={"/products"}>Surgical Masks</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>N95 Masks</Link>
+                  <Link to={"/products"}>N95 Masks</Link>
                 </li>
               </ul>
 
               <ul>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Oxygen Concentrators & Cans</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>BP Monitors</Link>
+                  <Link to={"/products"}>BP Monitors</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Nebulizers & Vaporizers</Link>
+                  <Link to={"/products"}>Nebulizers & Vaporizers</Link>
                 </li>
               </ul>
             </div>
@@ -318,50 +318,50 @@ const HeaderP3 = () => {
             <div className="subDiv">
               <ul style={{ width: "220px" }}>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Oximeters & Pedometers</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Vital Signs Monitors & Wearables</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Weighing Scales</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Thermometers</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>IR Thermometers</Link>
+                  <Link to={"/products"}>IR Thermometers</Link>
                 </li>
               </ul>
               <ul>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Body Massager</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Diabetes Monitors</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Mobility Equipments</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Exercise Equipments</strong>
                   </Link>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Doctor's Corner</strong>
                   </Link>
                 </li>
@@ -369,16 +369,16 @@ const HeaderP3 = () => {
 
               <ul>
                 <li>
-                  <Link to={"#"}>Stethoscopes</Link>
+                  <Link to={"/products"}>Stethoscopes</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Tapes & Bandages</Link>
+                  <Link to={"/products"}>Tapes & Bandages</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Clinical Diagnostic Equipments</Link>
+                  <Link to={"/products"}>Clinical Diagnostic Equipments</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Dressings & Wound Care</Link>
+                  <Link to={"/products"}>Dressings & Wound Care</Link>
                 </li>
               </ul>
             </div>
@@ -386,36 +386,36 @@ const HeaderP3 = () => {
             <div className="subDiv">
               <ul>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Supports & Braces</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Neck & Shoulder Support</Link>
+                  <Link to={"/products"}>Neck & Shoulder Support</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Knee & Leg Support</Link>
+                  <Link to={"/products"}>Knee & Leg Support</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Ankle & Foot Support</Link>
+                  <Link to={"/products"}>Ankle & Foot Support</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Hand & Wrist Braces</Link>
+                  <Link to={"/products"}>Hand & Wrist Braces</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Arm & Elbow Support</Link>
+                  <Link to={"/products"}>Arm & Elbow Support</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Cervical Pillows</Link>
+                  <Link to={"/products"}>Cervical Pillows</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Compression support & sleeves</Link>
+                  <Link to={"/products"}>Compression support & sleeves</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Heel support</Link>
+                  <Link to={"/products"}>Heel support</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Crepe Bandage</Link>
+                  <Link to={"/products"}>Crepe Bandage</Link>
                 </li>
               </ul>
             </div>
@@ -423,7 +423,7 @@ const HeaderP3 = () => {
           {/* =============================================================== */}
         </li>
         <li>
-          <Link className="link" to={"#"}>
+          <Link className="link" to={"/products"}>
             Personal care
           </Link>
           <span>
@@ -435,55 +435,55 @@ const HeaderP3 = () => {
             <div className="subDiv">
               <ul>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Skin Care</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Body Lotions</Link>
+                  <Link to={"/products"}>Body Lotions</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Mosquito Repellents</Link>
+                  <Link to={"/products"}>Mosquito Repellents</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Lip Balm</Link>
+                  <Link to={"/products"}>Lip Balm</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Acne Care</Link>
+                  <Link to={"/products"}>Acne Care</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Bath Essentials</Link>
+                  <Link to={"/products"}>Bath Essentials</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Facewash</Link>
+                  <Link to={"/products"}>Facewash</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Sanitizers & Handwash</Link>
+                  <Link to={"/products"}>Sanitizers & Handwash</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Sunscreen</Link>
+                  <Link to={"/products"}>Sunscreen</Link>
                 </li>
               </ul>
               <ul>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Sexual Wellness</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Condoms</Link>
+                  <Link to={"/products"}>Condoms</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Lubricants & Massage Gels</Link>
+                  <Link to={"/products"}>Lubricants & Massage Gels</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Personal body massagers</Link>
+                  <Link to={"/products"}>Personal body massagers</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Men Performance Enhancers</Link>
+                  <Link to={"/products"}>Men Performance Enhancers</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Sexual Health Supplements</Link>
+                  <Link to={"/products"}>Sexual Health Supplements</Link>
                 </li>
               </ul>
             </div>
@@ -491,49 +491,49 @@ const HeaderP3 = () => {
             <div className="subDiv">
               <ul>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Baby Care</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Baby & Infant Food</Link>
+                  <Link to={"/products"}>Baby & Infant Food</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Baby Diapers, wipes & more</Link>
+                  <Link to={"/products"}>Baby Diapers, wipes & more</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Nursing & Feeding</Link>
+                  <Link to={"/products"}>Nursing & Feeding</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Baby Bath Essentials</Link>
+                  <Link to={"/products"}>Baby Bath Essentials</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Baby Skin Care</Link>
+                  <Link to={"/products"}>Baby Skin Care</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Baby Healthcare</Link>
+                  <Link to={"/products"}>Baby Healthcare</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Baby Oral Health</Link>
+                  <Link to={"/products"}>Baby Oral Health</Link>
                 </li>
               </ul>
               <ul>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Hair Care</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Shampoo</Link>
+                  <Link to={"/products"}>Shampoo</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Hair Conditioners</Link>
+                  <Link to={"/products"}>Hair Conditioners</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Hair Oils</Link>
+                  <Link to={"/products"}>Hair Oils</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Hair Growth Products</Link>
+                  <Link to={"/products"}>Hair Growth Products</Link>
                 </li>
               </ul>
             </div>
@@ -541,41 +541,41 @@ const HeaderP3 = () => {
             <div className="subDiv">
               <ul>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Elderly Care</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Adult Diapers</Link>
+                  <Link to={"/products"}>Adult Diapers</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Bone & Joint Health</Link>
+                  <Link to={"/products"}>Bone & Joint Health</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Living & Safety Aids</Link>
+                  <Link to={"/products"}>Living & Safety Aids</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Orthopaedic Supports</Link>
+                  <Link to={"/products"}>Orthopaedic Supports</Link>
                 </li>
               </ul>
 
               <ul>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Women Care</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Women Care Supplements.</Link>
+                  <Link to={"/products"}>Women Care Supplements.</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Mother Care</Link>
+                  <Link to={"/products"}>Mother Care</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Menopause</Link>
+                  <Link to={"/products"}>Menopause</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Polycystic Ovary Syndrome</Link>
+                  <Link to={"/products"}>Polycystic Ovary Syndrome</Link>
                 </li>
               </ul>
             </div>
@@ -583,15 +583,15 @@ const HeaderP3 = () => {
             <div className="subDiv">
               <ul>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Men Care</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Men Grooming</Link>
+                  <Link to={"/products"}>Men Grooming</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Oral Care</strong>
                   </Link>
                 </li>
@@ -599,25 +599,25 @@ const HeaderP3 = () => {
 
               <ul>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Pet Care</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Pet Grooming</Link>
+                  <Link to={"/products"}>Pet Grooming</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Pet Food</Link>
+                  <Link to={"/products"}>Pet Food</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Pet Health Care</Link>
+                  <Link to={"/products"}>Pet Health Care</Link>
                 </li>
               </ul>
             </div>
           </div>
         </li>
         <li>
-          <Link className="link" to={"#"}>
+          <Link className="link" to={"/products"}>
             Health Conditions
           </Link>
           <span>
@@ -630,37 +630,37 @@ const HeaderP3 = () => {
             <div className="subDiv">
               <ul>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Stomach Care</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Heart Care</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Bone, Joint & Muscle Care</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Pain Relief</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Heating Aids</Link>
+                  <Link to={"/products"}>Heating Aids</Link>
                 </li>
               </ul>
               <ul>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Ear Care</strong>
                   </Link>{" "}
                 </li>
                 <li>
-                  <Link to={"#"}>Hearing Aid Devices</Link>
+                  <Link to={"/products"}>Hearing Aid Devices</Link>
                 </li>
               </ul>
             </div>
@@ -668,52 +668,52 @@ const HeaderP3 = () => {
             <div className="subDiv">
               <ul>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>First Aid</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Liver Care</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>cold & Cough</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Fever</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Mental Wellness</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Kidney Care</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Respiratory Care</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Piles, Fissures & Fistula</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Smoking Cessation</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Derma Care</strong>
                   </Link>
                 </li>
@@ -723,7 +723,7 @@ const HeaderP3 = () => {
           {/* ============================================================== */}
         </li>
         <li>
-          <Link className="link" to={"#"}>
+          <Link className="link" to={"/products"}>
             Ayurveda Products
           </Link>
           <span>
@@ -737,29 +737,29 @@ const HeaderP3 = () => {
             <div className="subDiv">
               <ul>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Ayurveda Top Brands</strong>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Dabur</Link>
+                  <Link to={"/products"}>Dabur</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Sri Sri Tattva</Link>
+                  <Link to={"/products"}>Sri Sri Tattva</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>kerala Ayurveda</Link>
+                  <Link to={"/products"}>kerala Ayurveda</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>jiva Ayurveda</Link>
+                  <Link to={"/products"}>jiva Ayurveda</Link>
                 </li>
                 <li>
-                  <Link to={"#"}>Patanjali</Link>
+                  <Link to={"/products"}>Patanjali</Link>
                 </li>
               </ul>
               <ul style={{ width: "190px" }}>
                 <li>
-                  <Link to={"#"}>
+                  <Link to={"/products"}>
                     <strong>Popular categories</strong>
                   </Link>{" "}
                 </li>
