@@ -5,6 +5,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./loader.css";
 import { useDispatch, useSelector } from "react-redux";
+
 import {
   fetchdata,
   sortproducts,
@@ -12,7 +13,7 @@ import {
   fetchfilterdiscount,
   AddToCart,
 } from "../../Redux/action";
-
+import { Footer } from "../../components/Footer/Footer";
 const Products = () => {
   const navigate = useNavigate();
   let username = useSelector((state) => state.username);
@@ -363,6 +364,7 @@ const Products = () => {
           </div>
         </>
       )}
+      <Footer />
     </>
   );
 };

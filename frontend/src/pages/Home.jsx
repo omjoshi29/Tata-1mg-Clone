@@ -10,7 +10,7 @@ import { SliderTypeThree } from "../components/Sliders/SliderTypeThree/SliderTyp
 import axios from "axios";
 import { ProductSlider } from "../components/Sliders/ProductSlider/ProductSlider";
 import Upperfooter from "./Descripton/Upperfooter";
-import Footer from "../components/Footer/Footer";
+import { Footer } from "../components/Footer/Footer";
 let Banner = [
   {
     imgUrl:
@@ -590,183 +590,187 @@ export const Home = () => {
   };
 
   return (
-    <HomeWrapper>
-      {/* <h1>Banner Slider</h1>
+    <>
+      <HomeWrapper>
+        {/* <h1>Banner Slider</h1>
       <BannerSlider {...data1} />
       <h2>Brands Slider</h2>
       <BrandsSlider {...data2} /> */}
 
-      {/* Top Courosal with banner */}
-      <div className="topBanner">
-        <div className="bannerSliderContainer">
-          <BannerSlider {...data1} />
+        {/* Top Courosal with banner */}
+        <div className="topBanner">
+          <div className="bannerSliderContainer">
+            <BannerSlider {...data1} />
+          </div>
+          <div className="rightBanner">
+            <img src={RightBanner} alt="" />
+          </div>
         </div>
-        <div className="rightBanner">
-          <img src={RightBanner} alt="" />
+        {/* Heading  */}
+        <div className="headingOf1mg">
+          <h1>
+            Tata 1mg: India’s Leading Online Pharmacy & Healthcare Platform
+          </h1>
         </div>
-      </div>
-      {/* Heading  */}
-      <div className="headingOf1mg">
-        <h1>Tata 1mg: India’s Leading Online Pharmacy & Healthcare Platform</h1>
-      </div>
-      {/* Add Care Plan */}
-      <div className="addOfCarePlan">
-        <span>
-          <img src={Careplan} alt="careplan" />
-        </span>
-      </div>
-      {/* Featured Brands */}
-      <div className="featuredBrands">
-        {/* Heading of Comp */}
-        <div className="headingOfComponent">
-          <span> Featured Brands</span>
-          <Button styles={seeAllButton} />
+        {/* Add Care Plan */}
+        <div className="addOfCarePlan">
+          <span>
+            <img src={Careplan} alt="careplan" />
+          </span>
         </div>
-        {/* Slider Container */}
-        <div className="sliderContaier">
-          <BrandsSlider {...brandsProp} />
+        {/* Featured Brands */}
+        <div className="featuredBrands">
+          {/* Heading of Comp */}
+          <div className="headingOfComponent">
+            <span> Featured Brands</span>
+            <Button styles={seeAllButton} />
+          </div>
+          {/* Slider Container */}
+          <div className="sliderContaier">
+            <BrandsSlider {...brandsProp} />
+          </div>
         </div>
-      </div>
 
-      {/* Full body health Checkup */}
-      <div className="featuredBrands">
-        {/* Heading of Comp */}
-        <div className="headingOfComponent">
-          <span>Full body health checkups</span>
-          <Button styles={seeAllButton} />
+        {/* Full body health Checkup */}
+        <div className="featuredBrands">
+          {/* Heading of Comp */}
+          <div className="headingOfComponent">
+            <span>Full body health checkups</span>
+            <Button styles={seeAllButton} />
+          </div>
+          {/* Slider Container */}
+          <div className="sliderContaier" style={{ height: "184px" }}>
+            {/* <BrandsSlider {...brandsProp} /> */}
+            <SliderTypeThree {...FullBodyChekcup} />
+          </div>
         </div>
-        {/* Slider Container */}
-        <div className="sliderContaier" style={{ height: "184px" }}>
-          {/* <BrandsSlider {...brandsProp} /> */}
-          <SliderTypeThree {...FullBodyChekcup} />
+        {/* Monsoon Sell */}
+        <div className="featuredBrands">
+          {/* Heading of Comp */}
+          <div className="headingOfComponent">
+            <span>Monsoon Wellness Sale</span>
+            <Button styles={seeAllButton} />
+          </div>
+          {/* Slider Container */}
+          <div className="sliderContaier">
+            <BrandsSlider {...MonsoonProp} />
+          </div>
         </div>
-      </div>
-      {/* Monsoon Sell */}
-      <div className="featuredBrands">
-        {/* Heading of Comp */}
-        <div className="headingOfComponent">
-          <span>Monsoon Wellness Sale</span>
-          <Button styles={seeAllButton} />
+        {/* Popular Categories Sell */}
+        <div className="featuredBrands">
+          {/* Heading of Comp */}
+          <div className="headingOfComponent">
+            <span>Popular Categories</span>
+            <Button styles={seeAllButton} />
+          </div>
+          {/* Slider Container */}
+          <div className="sliderContaier">
+            <BrandsSlider {...PopularCategorise} />
+          </div>
         </div>
-        {/* Slider Container */}
-        <div className="sliderContaier">
-          <BrandsSlider {...MonsoonProp} />
+        {/* Top sellers */}
+        {/* If height is more , give height to featuredBrands as well  */}
+        <div className="featuredBrands" style={{ height: "415px" }}>
+          {/* Heading of Comp */}
+          <div className="headingOfComponent">
+            <span>Top Sellers </span>
+            <Button styles={seeAllButton} />
+          </div>
+          {/* Slider Container */}
+          <div className="sliderContaier" style={{ height: "368px" }}>
+            <ProductSlider {...topsSellers} />
+          </div>
         </div>
-      </div>
-      {/* Popular Categories Sell */}
-      <div className="featuredBrands">
-        {/* Heading of Comp */}
-        <div className="headingOfComponent">
-          <span>Popular Categories</span>
-          <Button styles={seeAllButton} />
+        {/* Calcium| Supplement of the week */}
+        <div className="featuredBrands" style={{ height: "415px" }}>
+          {/* Heading of Comp */}
+          <div className="headingOfComponent">
+            <span>Calcium| Supplement of the week</span>
+            <Button styles={seeAllButton} />
+          </div>
+          {/* Slider Container */}
+          <div className="sliderContaier" style={{ height: "368px" }}>
+            <ProductSlider {...calciumSupData} />
+          </div>
         </div>
-        {/* Slider Container */}
-        <div className="sliderContaier">
-          <BrandsSlider {...PopularCategorise} />
+        {/* Shop by Health Concerns */}
+        <div className="featuredBrands">
+          {/* Heading of Comp */}
+          <div className="headingOfComponent">
+            <span>Shop by Health Concerns</span>
+            <Button styles={seeAllButton} />
+          </div>
+          {/* Slider Container */}
+          <div className="sliderContaier">
+            <BrandsSlider {...ShopByHealthConcerns} />
+          </div>
         </div>
-      </div>
-      {/* Top sellers */}
-      {/* If height is more , give height to featuredBrands as well  */}
-      <div className="featuredBrands" style={{ height: "415px" }}>
-        {/* Heading of Comp */}
-        <div className="headingOfComponent">
-          <span>Top Sellers </span>
-          <Button styles={seeAllButton} />
+        {/* Trending Now */}
+        <div className="featuredBrands" style={{ height: "415px" }}>
+          {/* Heading of Comp */}
+          <div className="headingOfComponent">
+            <span>Trendng Now</span>
+            <Button styles={seeAllButton} />
+          </div>
+          {/* Slider Container */}
+          <div className="sliderContaier" style={{ height: "368px" }}>
+            <ProductSlider {...trendingNowData} />
+          </div>
         </div>
-        {/* Slider Container */}
-        <div className="sliderContaier" style={{ height: "368px" }}>
-          <ProductSlider {...topsSellers} />
-        </div>
-      </div>
-      {/* Calcium| Supplement of the week */}
-      <div className="featuredBrands" style={{ height: "415px" }}>
-        {/* Heading of Comp */}
-        <div className="headingOfComponent">
-          <span>Calcium| Supplement of the week</span>
-          <Button styles={seeAllButton} />
-        </div>
-        {/* Slider Container */}
-        <div className="sliderContaier" style={{ height: "368px" }}>
-          <ProductSlider {...calciumSupData} />
-        </div>
-      </div>
-      {/* Shop by Health Concerns */}
-      <div className="featuredBrands">
-        {/* Heading of Comp */}
-        <div className="headingOfComponent">
-          <span>Shop by Health Concerns</span>
-          <Button styles={seeAllButton} />
-        </div>
-        {/* Slider Container */}
-        <div className="sliderContaier">
-          <BrandsSlider {...ShopByHealthConcerns} />
-        </div>
-      </div>
-      {/* Trending Now */}
-      <div className="featuredBrands" style={{ height: "415px" }}>
-        {/* Heading of Comp */}
-        <div className="headingOfComponent">
-          <span>Trendng Now</span>
-          <Button styles={seeAllButton} />
-        </div>
-        {/* Slider Container */}
-        <div className="sliderContaier" style={{ height: "368px" }}>
-          <ProductSlider {...trendingNowData} />
-        </div>
-      </div>
 
-      {/* Deals of the day */}
-      <div className="featuredBrands" style={{ height: "415px" }}>
-        {/* Heading of Comp */}
-        <div className="headingOfComponent">
-          <span>Deals of the day</span>
-          <Button styles={seeAllButton} />
+        {/* Deals of the day */}
+        <div className="featuredBrands" style={{ height: "415px" }}>
+          {/* Heading of Comp */}
+          <div className="headingOfComponent">
+            <span>Deals of the day</span>
+            <Button styles={seeAllButton} />
+          </div>
+          {/* Slider Container */}
+          <div className="sliderContaier" style={{ height: "368px" }}>
+            <ProductSlider {...dealsOfTheDayData} />
+          </div>
         </div>
-        {/* Slider Container */}
-        <div className="sliderContaier" style={{ height: "368px" }}>
-          <ProductSlider {...dealsOfTheDayData} />
+        {/*Shop by Health Concerns */}
+        <div className="featuredBrands">
+          {/* Heading of Comp */}
+          <div className="headingOfComponent">
+            <span>Shop by Health Concerns</span>
+            <Button styles={seeAllButton} />
+          </div>
+          {/* Slider Container */}
+          <div className="sliderContaier">
+            <BrandsSlider {...HealthCareDevices} />
+          </div>
         </div>
-      </div>
-      {/*Shop by Health Concerns */}
-      <div className="featuredBrands">
-        {/* Heading of Comp */}
-        <div className="headingOfComponent">
-          <span>Shop by Health Concerns</span>
-          <Button styles={seeAllButton} />
+        {/* New Arrivals on TATA 1mg */}
+        <div className="featuredBrands" style={{ height: "415px" }}>
+          {/* New arrivals on TATA 1mg */}
+          <div className="headingOfComponent">
+            <span>New arrivals on TATA 1mg</span>
+            <Button styles={seeAllButton} />
+          </div>
+          {/*New arrivals on TATA 1mg */}
+          <div className="sliderContaier" style={{ height: "368px" }}>
+            <ProductSlider {...newArrivalsDay} />
+          </div>
         </div>
-        {/* Slider Container */}
-        <div className="sliderContaier">
-          <BrandsSlider {...HealthCareDevices} />
+        {/* Health and Foods */}
+        <div className="featuredBrands">
+          {/* Heading of Comp */}
+          <div className="headingOfComponent">
+            <span>Shop by Health Concerns</span>
+            <Button styles={seeAllButton} />
+          </div>
+          {/* Slider Container */}
+          <div className="sliderContaier">
+            <BrandsSlider {...HealthAndFoods} />
+          </div>
         </div>
-      </div>
-      {/* New Arrivals on TATA 1mg */}
-      <div className="featuredBrands" style={{ height: "415px" }}>
-        {/* New arrivals on TATA 1mg */}
-        <div className="headingOfComponent">
-          <span>New arrivals on TATA 1mg</span>
-          <Button styles={seeAllButton} />
-        </div>
-        {/*New arrivals on TATA 1mg */}
-        <div className="sliderContaier" style={{ height: "368px" }}>
-          <ProductSlider {...newArrivalsDay} />
-        </div>
-      </div>
-      {/* Health and Foods */}
-      <div className="featuredBrands">
-        {/* Heading of Comp */}
-        <div className="headingOfComponent">
-          <span>Shop by Health Concerns</span>
-          <Button styles={seeAllButton} />
-        </div>
-        {/* Slider Container */}
-        <div className="sliderContaier">
-          <BrandsSlider {...HealthAndFoods} />
-        </div>
-      </div>
-      {/* Description */}
-      <Upperfooter />
-    </HomeWrapper>
-  
+        {/* Description */}
+        <Upperfooter />
+      </HomeWrapper>
+      <Footer />
+    </>
   );
 };
 
