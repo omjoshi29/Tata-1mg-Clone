@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { fetchdes, AddToCart } from "../../Redux/action";
 import "./loader.css";
+import { Footer } from "../../components/Footer/Footer";
 
 const ProductDescription = () => {
   const { id } = useParams();
@@ -136,6 +137,7 @@ const ProductDescription = () => {
           </div>
         </>
       )}
+      <Footer />
     </>
   );
 };
