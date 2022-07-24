@@ -29,7 +29,7 @@
 
   <hr>
   
-  <h4>Product PAge</h4>
+  <h4>Product Page</h4>
   <img src="./frontend/src/assets/readme images/Screenshot from 2022-07-24 12-58-58.png" alt="1mg ScreenShot currently unavailable"/>
   
   <hr>
