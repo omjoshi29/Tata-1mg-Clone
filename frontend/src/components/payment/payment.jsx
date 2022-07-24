@@ -84,8 +84,9 @@ export const Payment =()=>{
                 <Total/>
                 <div>
                   <Button onClick={()=>
-                  localStorage.removeItem('subtotal')
-                  
+                    (navigate("/"),
+                    localStorage.removeItem('subtotal')
+                    )
                 } styles={button}/>
                 </div>
             </div>
