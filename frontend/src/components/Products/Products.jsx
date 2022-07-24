@@ -11,7 +11,7 @@ import {
   fetchfilterbrand,
   fetchfilterdiscount,
   AddToCart,
-} from "./redux/action";
+} from "../../Redux/action";
 
 const Products = () => {
   const navigate = useNavigate();

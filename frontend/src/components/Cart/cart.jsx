@@ -62,7 +62,7 @@ useEffect(()=>{
             <div>
               <div onClick={()=>
               axios.post("https://unit-6projectbackend.herokuapp.com/removequant",
-              {_id:el._id,username:state.username,obj:obj})
+              {_id:el._id,username:state.username,obj:el._id})
               .then((data)=>{
                 setCartData(data.data[0].cats);
               })

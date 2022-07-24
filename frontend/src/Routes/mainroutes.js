@@ -11,11 +11,15 @@ import { Payment } from "../components/payment/payment"
 import Offer from "../components/Offer/Offer"
 import About from "../abtcomponents/About"
 import Footer from "../components/Footer/Footer"
+//import Products from "../components/Products/Products"
+//import ProductDescription from "../components/Products/ProductDescription"
+import Home from "../pages/Home"
 export const MainRoutes = ()=>{
     return (
         <div>
         <Navigation/>
         <Routes>
+            <Route path="/" element={<Home/>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/loading/:id" element={<LoadingGmail/>}/>
             <Route path="/address" element={<Address/>}/>
@@ -25,6 +29,8 @@ export const MainRoutes = ()=>{
             <Route path ="/payment" element={<Payment/>}/>
             <Route path ="/offer" element={<Offer/>}/>
             <Route path="/about" element={<About/>}/>
+            {/* <Route path="product" element={<Products/>}/> */}
+            {/* <Route path="/productdetails" element={<ProductDescription/>}/> */}
         </Routes>
         {/* <Footer/> */}
         </div>

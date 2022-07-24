@@ -17,7 +17,7 @@ import { MainRoutes } from "./Routes/mainroutes";
 function App() {
   return (
     <div className="App">
-      <MainRoutes/>
+        <MainRoutes/>
       
       </div>
   )
