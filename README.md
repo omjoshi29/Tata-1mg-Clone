@@ -18,6 +18,9 @@
   <li>Oauth(gmail)</li>
   <li>Twilio</li>
   <li>Product Page to browse all products based on categories</li>
+  <li>Sort products by prices and ratings</li>
+  <li>Filter products by brands and discounts</li>
+  <li>Pagination</li>
   <li>Checkout Page</li>
   <hr><br>
   <h4>Homepage</h4>
