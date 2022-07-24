@@ -25,7 +25,7 @@
  <img src="./frontend/src/assets/readme images/Screenshot from 2022-07-24 12-58-12.png" alt="1mg ScreenShot currently unavailable"/>
 
   <h4>Footer</h4>
- <img src="./frontend/src/assets/readme images/ Screenshot from 2022-07-24 12-58-20.png" alt="1mg ScreenShot currently unavailable"/>
+ <img src="./frontend/src/assets/readme images/Screenshot from 2022-07-24 12-58-20.png" alt="1mg ScreenShot currently unavailable"/>
 
   <hr>
   
