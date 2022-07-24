@@ -10,6 +10,7 @@ import { SliderTypeThree } from "../components/Sliders/SliderTypeThree/SliderTyp
 import axios from "axios";
 import { ProductSlider } from "../components/Sliders/ProductSlider/ProductSlider";
 import Upperfooter from "./Descripton/Upperfooter";
+import Footer from "../components/Footer/Footer";
 let Banner = [
   {
     imgUrl:
@@ -765,6 +766,7 @@ export const Home = () => {
       {/* Description */}
       <Upperfooter />
     </HomeWrapper>
+  
   );
 };
 
