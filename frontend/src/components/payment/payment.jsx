@@ -13,98 +13,88 @@ import { Total } from "../Cart/Total";
 import Button from "../Button";
 import { useNavigate } from "react-router-dom";
 
-export const Payment = () => {
-  //const [wellet,setWellet] = useState(false);
-  const [upi, setUpi] = useState(false);
-  const [netbank, setNetbank] = useState(false);
-  const [payDelivery, setPayDelivery] = useState(false);
-  const navigate = useNavigate();
-  const button = {
-    bg: "#ff6f61",
-    text: "PLACE ORDER",
-    width: "100%",
-    br: "0px",
-    color: "#ffffff",
-    height: "50px",
-    fontSize: "18px",
-  };
-  const handleupi = () => {
-    setUpi(true);
-    setNetbank(false);
-    setPayDelivery(false);
-  };
-  const handlebanking = () => {
-    setUpi(false);
-    setNetbank(true);
-    setPayDelivery(false);
-  };
-  const handlepay = () => {
-    setUpi(false);
-    setNetbank(false);
-    setPayDelivery(true);
-  };
-  return (
-    <div className={styles.paymentmain}>
-      <div className={styles.payment}>
+
+export const Payment =()=>{
+    //const [wellet,setWellet] = useState(false);
+    const [upi,setUpi] = useState(false);
+    const [netbank,setNetbank] = useState(false);
+    const [payDelivery,setPayDelivery] = useState(false);
+    const navigate = useNavigate()
+    const button = {
+        bg: "#ff6f61",
+        text: "PLACE ORDER",
+        width: "100%",
+        br: "0px",
+        color: "#ffffff",
+        height: "50px",
+        fontSize: "18px",
+      };
+    const handleupi = ()=>{
+        setUpi(true);
+        setNetbank(false);
+        setPayDelivery(false);
+
+    }
+    const handlebanking = ()=>{
+        setUpi(false);
+        setNetbank(true);
+        setPayDelivery(false);
+    }
+    const handlepay = ()=>{
+        setUpi(false);
+        setNetbank(false);
+        setPayDelivery(true);
+        
+    }
+    return (
         <div>
-          <img src={wallet} alt="" />
-          <p>WALLETS</p>
+             <div className={styles.paymentmain}>
+             <div className={styles.payment}>
+                <div>
+                    <img src={wallet} alt=""/>
+                    <p>WALLETS</p>
+                </div>
+                <div onClick={handleupi}>
+                    <img src={Upi} alt=""/>
+                    <p>UPI</p>
+                </div>
+                <div >
+                    <img src={Cards} alt=""/>
+                    <p>CARDS</p>
+                </div>
+                <div onClick={handlebanking}>
+                    <img src={Netbanking} alt=""/>
+                    <p>NET BANKING</p>
+                </div>
+                <div onClick={handlepay}>
+                    <img src={PayOn} alt=""/>
+                    <p>PAY ON DELIVERY</p>
+                </div>
+            </div>
+            <div className={styles.payment1}>
+                {upi ? <div><Upipage/></div> : netbank ? <div><NetBanking/></div> : 
+                payDelivery ? <div><PayOnDelivery/></div> :<div><Wallet/></div>}
+               
+            </div>
+            <div className={styles.rightpayment}>
+                <div>
+                    <p>Get 10% off (up to ₹200) on medicines and health products with HDFC bank credit cards.</p>
+                    <p>SHOW ALL PAYMENT OFFERS</p>
+                </div>
+                <Total/>
+                <div>
+                  <Button onClick={()=>
+                    (navigate("/"),
+                    localStorage.removeItem('subtotal')
+                    )
+                } styles={button}/>
+                </div>
+            </div>
         </div>
-        <div onClick={handleupi}>
-          <img src={Upi} alt="" />
-          <p>UPI</p>
-        </div>
-        <div>
-          <img src={Cards} alt="" />
-          <p>CARDS</p>
-        </div>
-        <div onClick={handlebanking}>
-          <img src={Netbanking} alt="" />
-          <p>NET BANKING</p>
-        </div>
-        <div onClick={handlepay}>
-          <img src={PayOn} alt="" />
-          <p>PAY ON DELIVERY</p>
-        </div>
+  
       </div>
-      <div className={styles.payment1}>
-        {upi ? (
-          <div>
-            <Upipage />
-          </div>
-        ) : netbank ? (
-          <div>
-            <NetBanking />
-          </div>
-        ) : payDelivery ? (
-          <div>
-            <PayOnDelivery />
-          </div>
-        ) : (
-          <div>
-            <Wallet />
-          </div>
-        )}
-      </div>
-      <div className={styles.rightpayment}>
-        <div>
-          <p>
-            Get 10% off (up to ₹200) on medicines and health products with HDFC
-            bank credit cards.
-          </p>
-          <p>SHOW ALL PAYMENT OFFERS</p>
-        </div>
-        <Total />
-        <div>
-          <Button
-            onClick={() => {
-              navigate("/");
-              localStorage.removeItem("subtotal");
-            }}
-            styles={button}
-          />
-        </div>
-      </div>
-    </div>
+        
+       
+    
   );
 };

@@ -21,7 +21,7 @@ export const MainRoutes = () => {
     <div>
       <Navigation />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home/>} />
         <Route path="/login" element={<Login />} />
         <Route path="/loading/:id" element={<LoadingGmail />} />
         <Route path="/address" element={<Address />} />
