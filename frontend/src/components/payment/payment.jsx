@@ -46,6 +46,7 @@ export const Payment =()=>{
         setPayDelivery(true);
         
     }
+    
     return (
         <div>
              <div className={styles.paymentmain}>
@@ -84,14 +85,17 @@ export const Payment =()=>{
                 <Total/>
                 <div>
                   <Button onClick={()=>
-                    (navigate("/"),
-                    localStorage.removeItem('subtotal')
-                    )
+                    {  
+                        alert("Payment Successfull");
+                        navigate("/");
+                      localStorage.removeItem('subtotal');
+                    }
                 } styles={button}/>
                 </div>
+             
             </div>
         </div>
-  
+        
       </div>
         
        

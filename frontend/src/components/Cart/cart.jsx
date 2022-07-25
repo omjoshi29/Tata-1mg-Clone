@@ -25,8 +25,9 @@ export const Cart = () => {
 useEffect(()=>{
   getcart()
   setObj({...obj});
+  
   //call()
-},[])
+},[cartData])
   const getcart = ()=>{
     axios.get(`https://unit-6projectbackend.herokuapp.com/getcart/${state.username}`).then(({data})=>{
         setCartData(data.data[0].cats)
@@ -65,8 +66,10 @@ useEffect(()=>{
               {_id:el._id,username:state.username,obj:el._id})
               .then((data)=>{
                 setCartData(data.data[0].cats);
+                getcart()
               })
-              } 
+            
+             } 
               
               className={styles.deleteCart}>
                 <img
