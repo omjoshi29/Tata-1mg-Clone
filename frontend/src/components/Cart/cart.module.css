@@ -42,10 +42,12 @@
 .deleteCart {
     display: flex;
     gap: 10px;
+    cursor: pointer;
 }
 .deletecart {
     display: flex;
     gap: 10px;
+    cursor: pointer;
 }
 .deleteCart>p {
     padding-top: 10px; 
@@ -99,6 +101,7 @@
     color: #ff7469;
     font-size: 14px;
     font-weight: 600;
+    cursor: pointer;
 }
 .knowmore>div:nth-child(2) {
     width: 180px;
@@ -111,6 +114,7 @@
     color: #ffff;
     font-size: 14px;
     font-weight: 600;
+    cursor: pointer;
 }
 .coupon {
     display: flex;
