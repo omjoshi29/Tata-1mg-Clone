@@ -6,7 +6,7 @@
 body {
   padding: 0;
   margin: 0;
-  background-color: var(--background);
+  /* background-color: var(--background); */
   max-width: 100%;
   font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #ffffff;

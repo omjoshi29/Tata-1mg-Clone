@@ -4,6 +4,7 @@ export const FooterWrapper = styled.div`
   height: auto;
   border: 1.5px solid var(--border);
   box-sizing: border-box;
+  background-color: #ffffff;
 
   /* * {
     border: 1px solid black;
