@@ -14,7 +14,8 @@
 <h2>Features :</h2><br>
   <li>Homepage - The landing Page</li>
   <li>Login/Signup Page </li>
-  <li>Jwt</li>
+  <li>Jwt(tokens,refreshTokens)</li>
+  <li>JS-Cookies(storing tokens in cookies)</li>
   <li>Oauth(gmail)</li>
   <li>Twilio</li>
   <li>Product Page to browse all products based on categories</li>
