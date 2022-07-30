@@ -12,7 +12,7 @@ export const Delivery = ()=>{
                      <p>Choose a delivery speed</p>
                      <p className={styles.between1}>
                          <img width="30px" src="https://image.shutterstock.com/image-vector/screen-record-button-isolated-on-600w-1457333453.jpg"/>
-                         <p>Between 25 - 27 July</p>
+                         <p>Between 02 - 04 Agust</p>
                      </p>
                  </div>
              </div>
