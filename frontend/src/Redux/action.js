@@ -1,4 +1,4 @@
-import { USEROTP, USERNAME } from "./actiontype";
+import { USEROTP, USERNAME ,USERCART} from "./actiontype";
 import axios from "axios";
 export const GETDATA = "GETDATA";
 export const DESDATA = "DESDATA";
@@ -21,6 +21,8 @@ export const sortdata = (payload) => ({
   type: SORTDATA,
   payload,
 });
+
+
 
 export const filterdatabrand = (payload) => ({
   type: BRANDFILTER,
@@ -111,10 +113,22 @@ export const AddToCart = (payload) => async (dispatch) => {
   alert("Product added successfully!");
 };
 
-export const fetchcart = (username) => async (dispatch) => {
-  let res = await axios.get(
+export const fetchcart = (username) => (dispatch) => {
+  axios.get(
     `https://unit-6projectbackend.herokuapp.com/getcart/${username}`
-  );
-  console.log(res.data);
-  dispatch(cartdata(res.data));
+  )
+  .then(({data})=>{
+    dispatch(cartdata(data.data[0].cats))      
+})
+
+};
+
+export const removecart = (obj) => (dispatch) => {
+  axios.post(
+    `https://unit-6projectbackend.herokuapp.com/removequant`
+  ,obj)
+  .then(({data})=>{
+    dispatch(cartdata(data.data[0].cats))      
+})
+
 };

@@ -3,15 +3,20 @@ import Button from "../Button";
 import styles from "./cart.module.css";
 import axios from "axios";
 import { Total } from "./Total";
+import{fetchcart,removecart} from "../../Redux/action"
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 export const Cart = () => {
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState({});
   const [cartData,setCartData] = useState([]);
   const [total,setTotal] = useState([])
+ 
   const state=useSelector((state)=>state);
+  console.log(state,"hereagin worrk!!!")
   const [obj,setObj] = useState({})
   const navigate = useNavigate()
+
+  const [myfalse,setfalse]=React.useState(false)
   const dispatch = useDispatch()
   const button = {
     bg: "#ff6f61",
@@ -23,22 +28,33 @@ export const Cart = () => {
     fontSize: "18px",
   };
 useEffect(()=>{
+  dispatch(fetchcart(state.username))
   getcart()
   setObj({...obj});
-  
-  //call()
-},[cartData])
+},[])
+
+
   const getcart = ()=>{
     axios.get(`https://unit-6projectbackend.herokuapp.com/getcart/${state.username}`).then(({data})=>{
         setCartData(data.data[0].cats)
-        console.log(data.data[0].Total,"tottal inital")
+
+          let obj={}
+        data.data[0].cats.map((ele)=>{
+          obj[ele._id]=1;
+        })
+        // console.log(obj,"badme")
+        setCount(obj)
+        // console.log(count)
+        // console.log(data)
+        console.log(data.data[0].Total,"tottal inital")       
     })
   }
 
 
-  var subTotal = cartData.reduce(function (acc, elem) {
-    return acc + elem.price * count;
+  var subTotal = state.cartdata.reduce(function (acc, elem) {
+    return acc + elem.price * count[elem._id];
   }, 0);
+
   const handleCheckout = ()=>{
     navigate("/address");
     localStorage.setItem("subtotal",JSON.stringify(subTotal))
@@ -50,25 +66,27 @@ useEffect(()=>{
       <div className={styles.leftcart}>
         <div>
           <p>Items NOT Requiring Prescription (1)</p>
-          {cartData.map((el)=>(
+          {state.cartdata.map((el)=>(
           <div key={el._id} className={styles.cartdata}>
             <div>
               <h3>{el.productName}</h3>
-              <h3>{(el.price*count)}</h3>
+              <h3>{(el.price*count[el._id])}</h3>
             </div>
             <div>
               <p>{el.shortDesc}</p>
               <s>MRP{el.strikedPrice}</s>
             </div>
             <div>
-              <div onClick={()=>
+              <div onClick={()=>{
+                let obj={_id:el._id,username:state.username,obj:el._id}
+                dispatch(removecart(obj))
               axios.post("https://unit-6projectbackend.herokuapp.com/removequant",
               {_id:el._id,username:state.username,obj:el._id})
               .then((data)=>{
-                setCartData(data.data[0].cats);
-                getcart()
-              })
-            
+                setCartData(data.data[0].cats)
+                setfalse(true)
+              })  
+              }    
              } 
               
               className={styles.deleteCart}>
@@ -81,15 +99,14 @@ useEffect(()=>{
 
               <div className={styles.deletecart}>
                 <img
-                  onClick={() =>setCount(count-1)}
+                  onClick={() =>{setCount({...count,[el._id]:count[el._id]-1})
+                }}
                   src="https://www.1mg.com/images/minus-cart.svg"
                 />
-                <p>{count}</p>
+                <p>{count[el._id]}</p>
                 <img
-                    onClick={() =>   setCount(count+1)
-                     
-                    
-                    }
+                onClick={() =>{setCount({...count,[el._id]:count[el._id]+1})
+              }}
                   src="https://www.1mg.com/images/plus-cart.svg"
                 />
               </div>

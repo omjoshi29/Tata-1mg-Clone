@@ -6,6 +6,7 @@ import {
   DISCOUNTFILTER,
   GETDATA,
   SORTDATA,
+  CARTDATA
 } from "./action";
 
 const initState = {
@@ -14,6 +15,7 @@ const initState = {
   productsData: [],
   allproducts: [],
   desData: {},
+  cartdata:[]
 };
 
 export const Userreducer = (state = initState, action) => {
@@ -53,6 +55,12 @@ export const Userreducer = (state = initState, action) => {
       };
     }
 
+    case CARTDATA:{
+      return{
+        ...state,
+        cartdata:action.payload
+      }
+    }
     case BRANDFILTER: {
       return {
         ...state,
