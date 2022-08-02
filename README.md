@@ -63,4 +63,4 @@ Omkar Joshi</a></li>
  <hr><hr>
   
 <h2>Author</h2>
-  <h2><a href="https://github.com/gautam6023">Gautam Gohil</a></h2>
+  <li><a href="https://github.com/gautam6023">@Gautam Gohil</a></li>
