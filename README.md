@@ -9,6 +9,7 @@
   <li>React.js</li>
   <li>MongoDB</li>
   <li>Redux</li>
+  <li>Express.js</li>
   <li>Node.js</li>
   <hr><br>
 <h2>Features :</h2><br>
